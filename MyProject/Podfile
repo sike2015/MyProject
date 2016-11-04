@@ -1,0 +1,13 @@
+platform :ios, '8.0'
+
+target 'MyProject' do
+
+pod 'AFNetworking', '~> 3.0'
+pod 'MBProgressHUD'
+pod 'IQKeyboardManager'
+pod 'YYModel'
+pod 'Masonry'
+pod 'MJRefresh'
+pod 'SDWebImage'
+pod 'UITableView+FDTemplateLayoutCell'
+end

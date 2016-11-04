@@ -1,0 +1,21 @@
+//
+//  MyProject-pch.pch
+//  MyProject
+//
+//  Created by sike on 2016/10/26.
+//  Copyright © 2016年 sike. All rights reserved.
+//
+
+#ifndef MyProject_pch_pch
+#define MyProject_pch_pch
+
+// Include any system framework and library headers here that should be included in all compilation units.
+// You will also need to set the Prefix Header build setting of one or more of your targets to reference this file.
+
+#import"UIConfig.h"
+#import"BLLConfig.h"
+#import"Commonfig.h"
+#import <UIKit/UIKit.h>
+#import "CategoryConfig.h"
+
+#endif /* MyProject_pch_pch */
