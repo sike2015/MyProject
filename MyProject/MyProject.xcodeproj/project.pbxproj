@@ -14,6 +14,8 @@
 		390699B61DC08DC9005FE694 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 390699B51DC08DC9005FE694 /* Assets.xcassets */; };
 		390699B91DC08DC9005FE694 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 390699B71DC08DC9005FE694 /* LaunchScreen.storyboard */; };
 		394701D71DCC33C7003D6AF2 /* UIView+Expansion.m in Sources */ = {isa = PBXBuildFile; fileRef = 394701D61DCC33C7003D6AF2 /* UIView+Expansion.m */; };
+		394701DD1DCC60F7003D6AF2 /* Utils.m in Sources */ = {isa = PBXBuildFile; fileRef = 394701DC1DCC60F7003D6AF2 /* Utils.m */; };
+		394701E21DCC6226003D6AF2 /* UUIDShortener.m in Sources */ = {isa = PBXBuildFile; fileRef = 394701E11DCC6226003D6AF2 /* UUIDShortener.m */; };
 		396634891DC0A18D00F22D27 /* UIView+UIViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3966347D1DC0A18D00F22D27 /* UIView+UIViewController.m */; };
 		3966348A1DC0A18D00F22D27 /* CustomVerticalLabel+Extension.m in Sources */ = {isa = PBXBuildFile; fileRef = 3966347F1DC0A18D00F22D27 /* CustomVerticalLabel+Extension.m */; };
 		3966348B1DC0A18D00F22D27 /* UIButton+Extension.m in Sources */ = {isa = PBXBuildFile; fileRef = 396634811DC0A18D00F22D27 /* UIButton+Extension.m */; };
@@ -22,6 +24,7 @@
 		3966348E1DC0A18D00F22D27 /* UITextField+Extension.m in Sources */ = {isa = PBXBuildFile; fileRef = 396634871DC0A18D00F22D27 /* UITextField+Extension.m */; };
 		396634941DC0A25200F22D27 /* CustomTextField.m in Sources */ = {isa = PBXBuildFile; fileRef = 396634911DC0A25200F22D27 /* CustomTextField.m */; };
 		396634951DC0A25200F22D27 /* CustomVerticalLabel.m in Sources */ = {isa = PBXBuildFile; fileRef = 396634931DC0A25200F22D27 /* CustomVerticalLabel.m */; };
+		39AFFAB11DCC769C00FB39A5 /* main.js in Resources */ = {isa = PBXBuildFile; fileRef = 39AFFAB01DCC769C00FB39A5 /* main.js */; };
 		39B32FF51DC0B01D000F7389 /* BaseViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 39B32FF41DC0B01D000F7389 /* BaseViewController.m */; };
 		39B32FF81DC0B0A1000F7389 /* BaseNormalViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 39B32FF71DC0B0A1000F7389 /* BaseNormalViewController.m */; };
 		39B32FFB1DC0B192000F7389 /* CustNavigationBar.m in Sources */ = {isa = PBXBuildFile; fileRef = 39B32FFA1DC0B192000F7389 /* CustNavigationBar.m */; };
@@ -46,6 +49,10 @@
 		390699BA1DC08DC9005FE694 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		394701D51DCC33C7003D6AF2 /* UIView+Expansion.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIView+Expansion.h"; sourceTree = "<group>"; };
 		394701D61DCC33C7003D6AF2 /* UIView+Expansion.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIView+Expansion.m"; sourceTree = "<group>"; };
+		394701DB1DCC60F7003D6AF2 /* Utils.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Utils.h; sourceTree = "<group>"; };
+		394701DC1DCC60F7003D6AF2 /* Utils.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Utils.m; sourceTree = "<group>"; };
+		394701E01DCC6226003D6AF2 /* UUIDShortener.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UUIDShortener.h; sourceTree = "<group>"; };
+		394701E11DCC6226003D6AF2 /* UUIDShortener.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = UUIDShortener.m; sourceTree = "<group>"; };
 		396634781DC09FF700F22D27 /* UIConfig.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = UIConfig.h; sourceTree = "<group>"; };
 		396634791DC0A18D00F22D27 /* CategoryConfig.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CategoryConfig.h; sourceTree = "<group>"; };
 		3966347C1DC0A18D00F22D27 /* UIView+UIViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIView+UIViewController.h"; sourceTree = "<group>"; };
@@ -66,6 +73,8 @@
 		396634931DC0A25200F22D27 /* CustomVerticalLabel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CustomVerticalLabel.m; sourceTree = "<group>"; };
 		396634961DC0A28200F22D27 /* BLLConfig.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = BLLConfig.h; sourceTree = "<group>"; };
 		396634971DC0A28C00F22D27 /* Commonfig.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Commonfig.h; sourceTree = "<group>"; };
+		39AFFAAF1DCC6D0900FB39A5 /* MyProject.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = MyProject.entitlements; sourceTree = "<group>"; };
+		39AFFAB01DCC769C00FB39A5 /* main.js */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.javascript; path = main.js; sourceTree = "<group>"; };
 		39B32FE91DC0A9F8000F7389 /* MyProject-pch.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "MyProject-pch.pch"; sourceTree = "<group>"; };
 		39B32FF31DC0B01D000F7389 /* BaseViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BaseViewController.h; sourceTree = "<group>"; };
 		39B32FF41DC0B01D000F7389 /* BaseViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BaseViewController.m; sourceTree = "<group>"; };
@@ -121,6 +130,7 @@
 		390699A81DC08DC9005FE694 /* MyProject */ = {
 			isa = PBXGroup;
 			children = (
+				39AFFAAF1DCC6D0900FB39A5 /* MyProject.entitlements */,
 				390699C21DC08EC7005FE694 /* UI */,
 				390699C01DC08EC7005FE694 /* BLL */,
 				390699C11DC08EC7005FE694 /* Comm */,
@@ -140,6 +150,7 @@
 		390699A91DC08DC9005FE694 /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
+				39AFFAB01DCC769C00FB39A5 /* main.js */,
 				390699AA1DC08DC9005FE694 /* main.m */,
 				39B32FE91DC0A9F8000F7389 /* MyProject-pch.pch */,
 			);
@@ -162,6 +173,9 @@
 			isa = PBXGroup;
 			children = (
 				396634971DC0A28C00F22D27 /* Commonfig.h */,
+				394701DB1DCC60F7003D6AF2 /* Utils.h */,
+				394701DC1DCC60F7003D6AF2 /* Utils.m */,
+				394701DE1DCC6112003D6AF2 /* Libary */,
 				39B330031DC0BCC4000F7389 /* GlobalData */,
 				39B32FFC1DC0B251000F7389 /* Category */,
 			);
@@ -177,6 +191,23 @@
 				396634771DC09F7000F22D27 /* Category */,
 			);
 			path = UI;
+			sourceTree = "<group>";
+		};
+		394701DE1DCC6112003D6AF2 /* Libary */ = {
+			isa = PBXGroup;
+			children = (
+				394701DF1DCC6226003D6AF2 /* UUIDShortener */,
+			);
+			path = Libary;
+			sourceTree = "<group>";
+		};
+		394701DF1DCC6226003D6AF2 /* UUIDShortener */ = {
+			isa = PBXGroup;
+			children = (
+				394701E01DCC6226003D6AF2 /* UUIDShortener.h */,
+				394701E11DCC6226003D6AF2 /* UUIDShortener.m */,
+			);
+			path = UUIDShortener;
 			sourceTree = "<group>";
 		};
 		396634771DC09F7000F22D27 /* Category */ = {
@@ -298,6 +329,14 @@
 						CreatedOnToolsVersion = 8.0;
 						DevelopmentTeam = GT496M7LMJ;
 						ProvisioningStyle = Automatic;
+						SystemCapabilities = {
+							com.apple.Keychain = {
+								enabled = 1;
+							};
+							com.apple.Push = {
+								enabled = 0;
+							};
+						};
 					};
 				};
 			};
@@ -327,6 +366,7 @@
 				390699B91DC08DC9005FE694 /* LaunchScreen.storyboard in Resources */,
 				390699B61DC08DC9005FE694 /* Assets.xcassets in Resources */,
 				390699B41DC08DC9005FE694 /* Main.storyboard in Resources */,
+				39AFFAB11DCC769C00FB39A5 /* main.js in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -390,6 +430,7 @@
 				396634941DC0A25200F22D27 /* CustomTextField.m in Sources */,
 				3966348B1DC0A18D00F22D27 /* UIButton+Extension.m in Sources */,
 				390699AE1DC08DC9005FE694 /* AppDelegate.m in Sources */,
+				394701E21DCC6226003D6AF2 /* UUIDShortener.m in Sources */,
 				396634951DC0A25200F22D27 /* CustomVerticalLabel.m in Sources */,
 				39B32FFB1DC0B192000F7389 /* CustNavigationBar.m in Sources */,
 				3966348C1DC0A18D00F22D27 /* UIColor+Random.m in Sources */,
@@ -397,6 +438,7 @@
 				3966348A1DC0A18D00F22D27 /* CustomVerticalLabel+Extension.m in Sources */,
 				394701D71DCC33C7003D6AF2 /* UIView+Expansion.m in Sources */,
 				396634891DC0A18D00F22D27 /* UIView+UIViewController.m in Sources */,
+				394701DD1DCC60F7003D6AF2 /* Utils.m in Sources */,
 				39B32FF51DC0B01D000F7389 /* BaseViewController.m in Sources */,
 				3966348E1DC0A18D00F22D27 /* UITextField+Extension.m in Sources */,
 				39B330021DC0B25D000F7389 /* UIColor+colorWithHexString.m in Sources */,
@@ -529,12 +571,13 @@
 			baseConfigurationReference = 9412BD434C4219A816B9D097 /* Pods-MyProject.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_ENTITLEMENTS = MyProject/MyProject.entitlements;
 				DEVELOPMENT_TEAM = GT496M7LMJ;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "MyProject/MyProject-pch.pch";
 				INFOPLIST_FILE = MyProject/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = MyProject.MyProject;
+				PRODUCT_BUNDLE_IDENTIFIER = com.ztjy.dev5;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 			};
 			name = Debug;
@@ -544,12 +587,13 @@
 			baseConfigurationReference = 655EC51DDC46CAD441569862 /* Pods-MyProject.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_ENTITLEMENTS = MyProject/MyProject.entitlements;
 				DEVELOPMENT_TEAM = GT496M7LMJ;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "MyProject/MyProject-pch.pch";
 				INFOPLIST_FILE = MyProject/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = MyProject.MyProject;
+				PRODUCT_BUNDLE_IDENTIFIER = com.ztjy.dev5;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 			};
 			name = Release;

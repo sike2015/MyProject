@@ -15,6 +15,9 @@ PODS:
   - AFNetworking/UIKit (3.1.0):
     - AFNetworking/NSURLSession
   - IQKeyboardManager (4.0.7)
+  - JSPatchPlatform (1.6.2):
+    - JSPatchPlatform/Core (= 1.6.2)
+  - JSPatchPlatform/Core (1.6.2)
   - Masonry (1.0.2)
   - MBProgressHUD (1.0.0)
   - MJRefresh (3.1.12)
@@ -27,6 +30,7 @@ PODS:
 DEPENDENCIES:
   - AFNetworking (~> 3.0)
   - IQKeyboardManager
+  - JSPatchPlatform
   - Masonry
   - MBProgressHUD
   - MJRefresh
@@ -37,6 +41,7 @@ DEPENDENCIES:
 SPEC CHECKSUMS:
   AFNetworking: 5e0e199f73d8626b11e79750991f5d173d1f8b67
   IQKeyboardManager: 69002bb4fea60596b710e57d426abc00e5063630
+  JSPatchPlatform: 105e331f1b899a397d2bc0300a9ace9f9d7b8f08
   Masonry: 7c429b56da9d4ee0bbb3ed77a5ea710d6a5df39e
   MBProgressHUD: 4890f671c94e8a0f3cf959aa731e9de2f036d71a
   MJRefresh: b96cdb21c4aa75a7b07654311ab2f315c497e806
@@ -44,6 +49,6 @@ SPEC CHECKSUMS:
   UITableView+FDTemplateLayoutCell: 234e1582bcc4e18461af91155123bb96538ed030
   YYModel: 2a7fdd96aaa4b86a824e26d0c517de8928c04b30
 
-PODFILE CHECKSUM: 88426fdfb4d4595a958667bc3587ada0e0b825cb
+PODFILE CHECKSUM: 97403781820ec49c1fc037e05977ffbfded2e110
 
 COCOAPODS: 1.1.1

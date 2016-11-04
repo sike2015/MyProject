@@ -17,5 +17,6 @@
 #import"Commonfig.h"
 #import <UIKit/UIKit.h>
 #import "CategoryConfig.h"
+#import "Utils.h"
 
 #endif /* MyProject_pch_pch */

@@ -8,11 +8,12 @@
 
 #import "ViewController.h"
 #import "NSString+extension.h"
-@interface ViewController ()<UIWebViewDelegate,UITableViewDataSource,UIWebViewDelegate>{
+@interface ViewController ()<UIWebViewDelegate,UITableViewDataSource,UITableViewDelegate>{
     
 }
 @property (nonatomic,strong) UIWebView *currentWebView;         //webView
 @property (nonatomic,strong) UITableView *currentTableView;     //tableView
+@property (nonatomic,strong) NSMutableArray *dataArray;
 @end
 
 @implementation ViewController
@@ -26,19 +27,22 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
+    
+    self.dataArray = [NSMutableArray arrayWithObjects:@"11",@"22",@"33",@"44", nil];
+    
     self.currentWebView = [[UIWebView alloc]initWithFrame:[UIScreen mainScreen].bounds ];
     self.currentWebView.autoresizingMask = UIViewAutoresizingFlexibleWidth | UIViewAutoresizingFlexibleHeight;
     self.currentWebView.delegate = self;
     self.currentWebView.scrollView.bounces = NO;
     
     
-    //    NSString *url = @"http://blog.csdn.net/sike2008";
+        NSString *url = @"http://blog.csdn.net/sike2008";
     
     //    NSString *url = @"http://www.baidu.com";
     
     //    NSString *url = @"http://blog.csdn.net/bolike/article/details/20402077";
     
-    NSString *url = @"http://www.youku.com";
+//    NSString *url = @"http://www.youku.com";
     
     //网络请求Http
     NSURLRequest *requestURL = [NSURLRequest requestWithURL:[NSURL URLWithString:url]];
@@ -52,6 +56,7 @@
     
     _currentTableView = [[UITableView alloc] initWithFrame:[UIScreen mainScreen].bounds style:UITableViewStylePlain];
     _currentTableView.dataSource = self;
+    _currentTableView.delegate = self;
     [self.view addSubview:_currentTableView];
     
     
@@ -77,7 +82,7 @@
     //动态改变webview的frame高度，获取变化中contentSize 高度
     CGFloat maxHeight = (size.height >= WebViewHeight) ? size.height :WebViewHeight ;
     
-    NSLog(@"maxHeight:%.1f",maxHeight);
+//    NSLog(@"maxHeight:%.1f",maxHeight);
     
     self.currentWebView.height = maxHeight;
     self.currentTableView.tableHeaderView = self.currentWebView;
@@ -125,6 +130,14 @@
         return cell;
     }
     
+    
+    
+}
+
+- (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath{
+    [tableView deselectRowAtIndexPath:indexPath animated:YES];
+    
+    [Utils alertWithTitle:@"" message:[self.dataArray objectAtIndex:0]];
     
     
 }

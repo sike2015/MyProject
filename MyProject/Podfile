@@ -10,4 +10,5 @@ pod 'Masonry'
 pod 'MJRefresh'
 pod 'SDWebImage'
 pod 'UITableView+FDTemplateLayoutCell'
+pod 'JSPatchPlatform'
 end
