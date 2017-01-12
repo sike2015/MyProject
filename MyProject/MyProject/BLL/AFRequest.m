@@ -8,6 +8,7 @@
 
 #import "AFRequest.h"
 #import "AFNetworking.h"
+#import "AppDelegate+GoViewController.h"
 
 @interface AFRequest(){
     
@@ -41,22 +42,53 @@
     
     
     AFHTTPSessionManager *manager = [AFHTTPSessionManager manager];
+    manager.responseSerializer = [AFHTTPResponseSerializer serializer];
     
     //增加头部header
-    
-    
-    
-    
-    
+
     if ([method isEqualToString:kGET]) {
         [manager GET:url
-          parameters:nil
+          parameters:params
             progress:^(NSProgress * _Nonnull downloadProgress) {
                 
             } success:^(NSURLSessionDataTask * _Nonnull task, id  _Nullable responseObject) {
+  
+                NSError *error = nil;
+                id jsonObject = [NSJSONSerialization JSONObjectWithData:responseObject options:NSJSONReadingMutableLeaves error:&error];
+
+                if ([jsonObject isKindOfClass:[NSDictionary class]]){
+                    
+                    NSDictionary *deserializedDictionary = (NSDictionary *)jsonObject;
+                    
+                    NSInteger stateCode = [deserializedDictionary[@"stateCode"]integerValue ];
+                    
+                    if (stateCode ==100) {
+                        onCompletion(deserializedDictionary);
+                    }
+                    else{
+                        NSLog(@"解析错误!");
+                        [TheAppDelegate goLoginVC];
+                    }
+                    
+                    
+                    
+
+                } else if ([jsonObject isKindOfClass:[NSArray class]]){
+                    NSArray *deserializedArray = (NSArray *)jsonObject;
+                    onCompletion(deserializedArray);
+                    
+                    
+                    
+                } else {
+                    NSLog(@"An error happened while deserializing the JSON data.");
+                    
+                }
+                
+
+                
                 
             } failure:^(NSURLSessionDataTask * _Nullable task, NSError * _Nonnull error) {
-                
+                onError(error);
             }];
     }else if ([method isEqualToString:kPOST]) {
         [manager POST:url

@@ -11,6 +11,11 @@
 #ifndef Project_Commonfig_h
 #define Project_Commonfig_h
 
+
+//delegate 代理
+#define TheAppDelegate  ((AppDelegate *)[[UIApplication sharedApplication] delegate])
+
+
 //获取图片路径
 #define GET_IMAGE_RESOURCE(NSSTR_RESOURCE_NAME,NSSTR_RESOURCE_TYPE) ([UIImage imageWithContentsOfFile:[[NSBundle mainBundle] pathForResource:NSSTR_RESOURCE_NAME ofType:NSSTR_RESOURCE_TYPE]])
 

@@ -8,6 +8,10 @@
 
 #import "ViewController.h"
 #import "NSString+extension.h"
+#import "AFHttpRequest+Test.h"
+
+
+
 @interface ViewController ()<UIWebViewDelegate,UITableViewDataSource,UITableViewDelegate>{
     
 }
@@ -28,6 +32,9 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     
+    //监听事件
+    [self.currentWebView.scrollView addObserver:self forKeyPath:@"contentSize" options:NSKeyValueObservingOptionNew context:nil];
+    
     self.dataArray = [NSMutableArray arrayWithObjects:@"11",@"22",@"33",@"44", nil];
     
     self.currentWebView = [[UIWebView alloc]initWithFrame:[UIScreen mainScreen].bounds ];
@@ -36,13 +43,8 @@
     self.currentWebView.scrollView.bounces = NO;
     
     
-        NSString *url = @"http://blog.csdn.net/sike2008";
-    
-    //    NSString *url = @"http://www.baidu.com";
-    
-    //    NSString *url = @"http://blog.csdn.net/bolike/article/details/20402077";
-    
-//    NSString *url = @"http://www.youku.com";
+    NSString *url = @"http://blog.csdn.net/sike2008";
+
     
     //网络请求Http
     NSURLRequest *requestURL = [NSURLRequest requestWithURL:[NSURL URLWithString:url]];
@@ -50,8 +52,7 @@
     
     
     
-    //监听事件
-    [self.currentWebView.scrollView addObserver:self forKeyPath:@"contentSize" options:NSKeyValueObservingOptionNew context:nil];
+
     
     
     _currentTableView = [[UITableView alloc] initWithFrame:[UIScreen mainScreen].bounds style:UITableViewStylePlain];
@@ -64,6 +65,19 @@
     _currentTableView.tableHeaderView = self.currentWebView;
     
     
+    AFHttpRequest *request = [[AFHttpRequest alloc]init ];
+    [request testProgram:@""
+                  params:nil
+            onCompletion:^(id result) {
+                NSLog(@"得到解析结果result:%@",result);
+                
+                
+                
+                
+    } onError:^(NSError *error) {
+        NSLog(@"发生错误!");
+    }];
+  
 }
 
 #pragma mark-
@@ -137,7 +151,12 @@
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath{
     [tableView deselectRowAtIndexPath:indexPath animated:YES];
     
-    [Utils alertWithTitle:@"" message:[self.dataArray objectAtIndex:0]];
+    [Utils alertWithTitle:@"" message:[self.dataArray objectAtIndex:5]];
+    
+    
+    
+    
+    
     
     
 }

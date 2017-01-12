@@ -19,12 +19,14 @@
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
     // Override point for customization after application launch.
     
-    [JSPatch startWithAppKey:@"d4c7b6428f8a5a6e"];
-    [JSPatch sync];
+    
+//    //网络更新
+//    [JSPatch startWithAppKey:@"d4c7b6428f8a5a6e"];
+//    [JSPatch sync];
     
     
-    
-//    [JSPatch testScriptInBundle];
+    //本地更新测试
+    [JSPatch testScriptInBundle];
     
     [JSPatch setupCallback:^(JPCallbackType type, NSDictionary *data, NSError *error) {
         switch (type) {
