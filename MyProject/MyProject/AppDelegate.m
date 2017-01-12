@@ -8,6 +8,7 @@
 
 #import "AppDelegate.h"
 #import <JSPatchPlatform/JSPatch.h>
+#import "AppDelegate+GoViewController.h"
 
 @interface AppDelegate ()
 
@@ -62,8 +63,31 @@
         }
     }];
     
+    
+    
+    dispatch_after(dispatch_time(DISPATCH_TIME_NOW, (int64_t)(2 * NSEC_PER_SEC)), dispatch_get_main_queue(), ^{
+        NSLog(@"延迟2秒后 ");
+        [self test];
+    });
+    
     return YES;
 }
+
+
+- (void)test
+{
+    // 这个规则肯定事先跟服务端沟通好，跳转对应的界面需要对应的参数
+    NSDictionary *userInfo = @{
+                               @"class": @"LoginViewController",
+                               @"property": @{
+                                       @"testStr": @"show",
+                                       @"type": @"12"
+                                       }
+                               };
+    
+    [self push:userInfo];
+}
+
 
 
 - (void)applicationWillResignActive:(UIApplication *)application {

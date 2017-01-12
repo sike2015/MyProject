@@ -65,18 +65,18 @@
     _currentTableView.tableHeaderView = self.currentWebView;
     
     
-    AFHttpRequest *request = [[AFHttpRequest alloc]init ];
-    [request testProgram:@""
-                  params:nil
-            onCompletion:^(id result) {
-                NSLog(@"得到解析结果result:%@",result);
-                
-                
-                
-                
-    } onError:^(NSError *error) {
-        NSLog(@"发生错误!");
-    }];
+//    AFHttpRequest *request = [[AFHttpRequest alloc]init ];
+//    [request testProgram:@""
+//                  params:nil
+//            onCompletion:^(id result) {
+//                NSLog(@"得到解析结果result:%@",result);
+//                
+//                
+//                
+//                
+//    } onError:^(NSError *error) {
+//        NSLog(@"发生错误!");
+//    }];
   
 }
 

@@ -67,19 +67,13 @@
                     }
                     else{
                         NSLog(@"解析错误!");
-                        [TheAppDelegate goLoginVC];
+//                        [TheAppDelegate goLoginVC];
                     }
                     
                     
                     
 
-                } else if ([jsonObject isKindOfClass:[NSArray class]]){
-                    NSArray *deserializedArray = (NSArray *)jsonObject;
-                    onCompletion(deserializedArray);
-                    
-                    
-                    
-                } else {
+                }else {
                     NSLog(@"An error happened while deserializing the JSON data.");
                     
                 }

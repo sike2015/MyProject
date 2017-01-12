@@ -16,4 +16,10 @@
  */
 -(void)goLoginVC;
 
+
+/**
+ *  跳转界面
+ */
+- (void)push:(NSDictionary *)params;
+
 @end

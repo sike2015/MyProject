@@ -9,5 +9,5 @@
 #import "BaseNormalViewController.h"
 
 @interface LoginViewController : BaseNormalViewController
-
+@property (nonatomic,strong) NSString *testStr;
 @end

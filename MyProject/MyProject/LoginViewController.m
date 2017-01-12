@@ -21,6 +21,14 @@
     //设置背景色
     self.view.backgroundColor = [UIColor yellowColor];
     
+    
+    UILabel *label = [[UILabel alloc]initWithFrame:CGRectMake(0, 0, 100, 30) ];
+    label.text = self.testStr;
+    label.center = self.view.center;
+    [self.view addSubview:label];
+    
+    
+    
 }
 
 
