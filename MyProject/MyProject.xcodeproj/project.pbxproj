@@ -15,6 +15,8 @@
 		390699B91DC08DC9005FE694 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 390699B71DC08DC9005FE694 /* LaunchScreen.storyboard */; };
 		3938D8701E275262003FC258 /* AppDelegate+GoViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3938D86F1E275262003FC258 /* AppDelegate+GoViewController.m */; };
 		3938D8731E27547A003FC258 /* LoginViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3938D8721E27547A003FC258 /* LoginViewController.m */; };
+		393E8AC81EE6A3A900DD7E8F /* LoadingHUD.m in Sources */ = {isa = PBXBuildFile; fileRef = 393E8AC71EE6A3A900DD7E8F /* LoadingHUD.m */; };
+		393E8ACC1EE6A4B400DD7E8F /* UIImage+ZTHColor.m in Sources */ = {isa = PBXBuildFile; fileRef = 393E8ACA1EE6A4B400DD7E8F /* UIImage+ZTHColor.m */; };
 		394701D71DCC33C7003D6AF2 /* UIView+Expansion.m in Sources */ = {isa = PBXBuildFile; fileRef = 394701D61DCC33C7003D6AF2 /* UIView+Expansion.m */; };
 		394701DD1DCC60F7003D6AF2 /* Utils.m in Sources */ = {isa = PBXBuildFile; fileRef = 394701DC1DCC60F7003D6AF2 /* Utils.m */; };
 		394701E21DCC6226003D6AF2 /* UUIDShortener.m in Sources */ = {isa = PBXBuildFile; fileRef = 394701E11DCC6226003D6AF2 /* UUIDShortener.m */; };
@@ -26,7 +28,6 @@
 		3966348E1DC0A18D00F22D27 /* UITextField+Extension.m in Sources */ = {isa = PBXBuildFile; fileRef = 396634871DC0A18D00F22D27 /* UITextField+Extension.m */; };
 		396634941DC0A25200F22D27 /* CustomTextField.m in Sources */ = {isa = PBXBuildFile; fileRef = 396634911DC0A25200F22D27 /* CustomTextField.m */; };
 		396634951DC0A25200F22D27 /* CustomVerticalLabel.m in Sources */ = {isa = PBXBuildFile; fileRef = 396634931DC0A25200F22D27 /* CustomVerticalLabel.m */; };
-		39AFFAB11DCC769C00FB39A5 /* main.js in Resources */ = {isa = PBXBuildFile; fileRef = 39AFFAB01DCC769C00FB39A5 /* main.js */; };
 		39B32FF51DC0B01D000F7389 /* BaseViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 39B32FF41DC0B01D000F7389 /* BaseViewController.m */; };
 		39B32FF81DC0B0A1000F7389 /* BaseNormalViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 39B32FF71DC0B0A1000F7389 /* BaseNormalViewController.m */; };
 		39B32FFB1DC0B192000F7389 /* CustNavigationBar.m in Sources */ = {isa = PBXBuildFile; fileRef = 39B32FFA1DC0B192000F7389 /* CustNavigationBar.m */; };
@@ -54,6 +55,10 @@
 		3938D86F1E275262003FC258 /* AppDelegate+GoViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "AppDelegate+GoViewController.m"; sourceTree = "<group>"; };
 		3938D8711E27547A003FC258 /* LoginViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LoginViewController.h; sourceTree = "<group>"; };
 		3938D8721E27547A003FC258 /* LoginViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LoginViewController.m; sourceTree = "<group>"; };
+		393E8AC61EE6A3A900DD7E8F /* LoadingHUD.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LoadingHUD.h; sourceTree = "<group>"; };
+		393E8AC71EE6A3A900DD7E8F /* LoadingHUD.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LoadingHUD.m; sourceTree = "<group>"; };
+		393E8AC91EE6A4B400DD7E8F /* UIImage+ZTHColor.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIImage+ZTHColor.h"; sourceTree = "<group>"; };
+		393E8ACA1EE6A4B400DD7E8F /* UIImage+ZTHColor.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIImage+ZTHColor.m"; sourceTree = "<group>"; };
 		394701D51DCC33C7003D6AF2 /* UIView+Expansion.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIView+Expansion.h"; sourceTree = "<group>"; };
 		394701D61DCC33C7003D6AF2 /* UIView+Expansion.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIView+Expansion.m"; sourceTree = "<group>"; };
 		394701DB1DCC60F7003D6AF2 /* Utils.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Utils.h; sourceTree = "<group>"; };
@@ -81,7 +86,6 @@
 		396634961DC0A28200F22D27 /* BLLConfig.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = BLLConfig.h; sourceTree = "<group>"; };
 		396634971DC0A28C00F22D27 /* Commonfig.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Commonfig.h; sourceTree = "<group>"; };
 		39AFFAAF1DCC6D0900FB39A5 /* MyProject.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = MyProject.entitlements; sourceTree = "<group>"; };
-		39AFFAB01DCC769C00FB39A5 /* main.js */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.javascript; path = main.js; sourceTree = "<group>"; };
 		39B32FE91DC0A9F8000F7389 /* MyProject-pch.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "MyProject-pch.pch"; sourceTree = "<group>"; };
 		39B32FF31DC0B01D000F7389 /* BaseViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BaseViewController.h; sourceTree = "<group>"; };
 		39B32FF41DC0B01D000F7389 /* BaseViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BaseViewController.m; sourceTree = "<group>"; };
@@ -165,7 +169,6 @@
 		390699A91DC08DC9005FE694 /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
-				39AFFAB01DCC769C00FB39A5 /* main.js */,
 				390699AA1DC08DC9005FE694 /* main.m */,
 				39B32FE91DC0A9F8000F7389 /* MyProject-pch.pch */,
 			);
@@ -243,6 +246,8 @@
 				396634851DC0A18D00F22D27 /* UIImageView+Extension.m */,
 				396634861DC0A18D00F22D27 /* UITextField+Extension.h */,
 				396634871DC0A18D00F22D27 /* UITextField+Extension.m */,
+				393E8AC91EE6A4B400DD7E8F /* UIImage+ZTHColor.h */,
+				393E8ACA1EE6A4B400DD7E8F /* UIImage+ZTHColor.m */,
 			);
 			path = Category;
 			sourceTree = "<group>";
@@ -256,6 +261,8 @@
 				396634911DC0A25200F22D27 /* CustomTextField.m */,
 				396634921DC0A25200F22D27 /* CustomVerticalLabel.h */,
 				396634931DC0A25200F22D27 /* CustomVerticalLabel.m */,
+				393E8AC61EE6A3A900DD7E8F /* LoadingHUD.h */,
+				393E8AC71EE6A3A900DD7E8F /* LoadingHUD.m */,
 			);
 			path = CustomView;
 			sourceTree = "<group>";
@@ -381,7 +388,6 @@
 				390699B91DC08DC9005FE694 /* LaunchScreen.storyboard in Resources */,
 				390699B61DC08DC9005FE694 /* Assets.xcassets in Resources */,
 				390699B41DC08DC9005FE694 /* Main.storyboard in Resources */,
-				39AFFAB11DCC769C00FB39A5 /* main.js in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -461,7 +467,9 @@
 				39B330021DC0B25D000F7389 /* UIColor+colorWithHexString.m in Sources */,
 				3966348D1DC0A18D00F22D27 /* UIImageView+Extension.m in Sources */,
 				390699AB1DC08DC9005FE694 /* main.m in Sources */,
+				393E8ACC1EE6A4B400DD7E8F /* UIImage+ZTHColor.m in Sources */,
 				39B3300D1DC0C138000F7389 /* AFHttpRequest.m in Sources */,
+				393E8AC81EE6A3A900DD7E8F /* LoadingHUD.m in Sources */,
 				3938D8701E275262003FC258 /* AppDelegate+GoViewController.m in Sources */,
 				39B3300A1DC0C118000F7389 /* AFRequest.m in Sources */,
 				39B330011DC0B25D000F7389 /* NSString+extension.m in Sources */,

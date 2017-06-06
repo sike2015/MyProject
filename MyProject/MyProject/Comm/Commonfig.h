@@ -51,12 +51,12 @@
 //限制字符长度
 #define kRemarkText  100    //备注字符串长度
 
-#define kMaxPasswordlength 16   //最大密码长度
-#define kMaxNicknamelength 10   //最大昵称长度
+#define kMaxPasswordLength 16   //最大密码长度
+#define kMaxNicknameLength 10   //最大昵称长度
 
-#define kMaxAddrlength 100   //最大地址长度
-#define kMaxNamelength 30    //收货人姓名长度
-#define kMaxPhonelength 11   //电话号码长度
+#define kMaxAddrLength 100   //最大地址长度
+#define kMaxNameLength 30    //收货人姓名长度
+#define kMaxPhoneLength 11   //电话号码长度
 
 
 

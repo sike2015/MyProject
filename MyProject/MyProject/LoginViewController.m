@@ -7,7 +7,7 @@
 //
 
 #import "LoginViewController.h"
-
+#import "LoadingHUD.h"
 @interface LoginViewController ()
 
 @end
@@ -26,6 +26,8 @@
     label.text = self.testStr;
     label.center = self.view.center;
     [self.view addSubview:label];
+    
+    [LoadingHUD showLoadingView];
     
     
     

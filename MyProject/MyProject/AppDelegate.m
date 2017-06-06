@@ -7,7 +7,6 @@
 //
 
 #import "AppDelegate.h"
-#import <JSPatchPlatform/JSPatch.h>
 #import "AppDelegate+GoViewController.h"
 
 @interface AppDelegate ()
@@ -26,49 +25,14 @@
 //    [JSPatch sync];
     
     
-    //本地更新测试
-    [JSPatch testScriptInBundle];
-    
-    [JSPatch setupCallback:^(JPCallbackType type, NSDictionary *data, NSError *error) {
-        switch (type) {
-            case JPCallbackTypeUnknow: {
-                NSLog(@"末知 %@ %@", data, error);
-                break;
-            }
-            case JPCallbackTypeRunScript: {
-                NSLog(@"执行脚本 %@ %@", data, error);
-                break;
-            }
-            case JPCallbackTypeUpdate: {
-                NSLog(@"脚本有更新 %@ %@", data, error);
-                break;
-            }
-                
-            case JPCallbackTypeUpdateDone: {
-                NSLog(@"已获取更新%@ %@", data, error);
-                break;
-            }
-                
-            case JPCallbackTypeCondition: {
-                NSLog(@"条件下发 %@ %@", data, error);
-                break;
-            }
-            case JPCallbackTypeGray: {
-                NSLog(@"灰度下发%@ %@", data, error);
-                break;
-            }
-                
-            default:
-                break;
-        }
-    }];
+
     
     
     
-    dispatch_after(dispatch_time(DISPATCH_TIME_NOW, (int64_t)(2 * NSEC_PER_SEC)), dispatch_get_main_queue(), ^{
-        NSLog(@"延迟2秒后 ");
-        [self test];
-    });
+//    dispatch_after(dispatch_time(DISPATCH_TIME_NOW, (int64_t)(2 * NSEC_PER_SEC)), dispatch_get_main_queue(), ^{
+//        NSLog(@"延迟2秒后 ");
+//        [self test];
+//    });
     
     return YES;
 }

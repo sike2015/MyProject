@@ -15,40 +15,50 @@ PODS:
   - AFNetworking/UIKit (3.1.0):
     - AFNetworking/NSURLSession
   - IQKeyboardManager (4.0.7)
-  - JSPatchPlatform (1.6.2):
-    - JSPatchPlatform/Core (= 1.6.2)
-  - JSPatchPlatform/Core (1.6.2)
   - Masonry (1.0.2)
   - MBProgressHUD (1.0.0)
   - MJRefresh (3.1.12)
   - SDWebImage (3.8.2):
     - SDWebImage/Core (= 3.8.2)
   - SDWebImage/Core (3.8.2)
-  - UITableView+FDTemplateLayoutCell (1.4)
+  - SVProgressHUD (2.0.3)
+  - TZImagePickerController (1.7.1)
+  - UIActionSheet+Blocks (0.9)
+  - UIAlertView+Blocks (0.9)
+  - UTDID (1.0.0)
+  - WZLBadge (1.2.5)
   - YYModel (1.0.4)
 
 DEPENDENCIES:
   - AFNetworking (~> 3.0)
   - IQKeyboardManager
-  - JSPatchPlatform
   - Masonry
   - MBProgressHUD
   - MJRefresh
   - SDWebImage
-  - UITableView+FDTemplateLayoutCell
+  - SVProgressHUD
+  - TZImagePickerController
+  - UIActionSheet+Blocks
+  - UIAlertView+Blocks
+  - UTDID
+  - WZLBadge
   - YYModel
 
 SPEC CHECKSUMS:
   AFNetworking: 5e0e199f73d8626b11e79750991f5d173d1f8b67
   IQKeyboardManager: 69002bb4fea60596b710e57d426abc00e5063630
-  JSPatchPlatform: 105e331f1b899a397d2bc0300a9ace9f9d7b8f08
   Masonry: 7c429b56da9d4ee0bbb3ed77a5ea710d6a5df39e
   MBProgressHUD: 4890f671c94e8a0f3cf959aa731e9de2f036d71a
   MJRefresh: b96cdb21c4aa75a7b07654311ab2f315c497e806
   SDWebImage: 098e97e6176540799c27e804c96653ee0833d13c
-  UITableView+FDTemplateLayoutCell: 234e1582bcc4e18461af91155123bb96538ed030
+  SVProgressHUD: b0830714205bea1317ea1a2ebc71e5633af334d4
+  TZImagePickerController: cbfd57ba947263759b860f74132dd1bc33125afc
+  UIActionSheet+Blocks: e180b7dad0a721ab7f212ac9742af799008bb358
+  UIAlertView+Blocks: a46c99c5144f6c5dbc7d62fd2a0678daceec89a3
+  UTDID: 05c4737c8cf5c210e86d0235570816ed00e023e8
+  WZLBadge: 16c08aa0a645e2591690f21cbcb410a3d878c7ac
   YYModel: 2a7fdd96aaa4b86a824e26d0c517de8928c04b30
 
-PODFILE CHECKSUM: 97403781820ec49c1fc037e05977ffbfded2e110
+PODFILE CHECKSUM: 9eb9d0e89be02e3506e5160457db35ad27e91228
 
 COCOAPODS: 1.1.1
