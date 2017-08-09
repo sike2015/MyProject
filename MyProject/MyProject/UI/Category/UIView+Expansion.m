@@ -173,4 +173,98 @@
     
     self.frame = newframe;	
 }
+
+- (UIViewController *)viewController
+{
+    UIResponder *next = self.nextResponder;
+    do {
+        if ([next isKindOfClass:[UIViewController class]]) {
+            return (UIViewController *)next;
+            break;
+        }
+        next = next.nextResponder;
+        
+    } while (next!=nil);
+    
+    return nil;
+}
+
+//使用默认加载失败图片
+-(void)userConfigView:(NSString *)imageName showName:(NSString *)showName ReloadButtonBlock:(void(^)(id sender))block{
+    
+    //初始化BlankView
+    BlankView *blankView = [[BlankView alloc]initWithFrame:self.bounds];
+    [self addSubview:blankView];
+    
+    [blankView configView:showName showName:showName ReloadButtonBlock:block];
+    
+ 
+    
+}
+
+
+@end
+
+
+@implementation BlankView
+
+- (instancetype)initWithFrame:(CGRect)frame
+{
+    if (self = [super initWithFrame:frame]) {
+        self.backgroundColor = [UIColor clearColor];
+        
+        
+    }
+    return self;
+}
+
+
+- (void)configView:(NSString *)imageName showName:(NSString *)showName ReloadButtonBlock:(void(^)(id sender))block{
+    
+    //默认图片
+    UIImageView *showImageView = [[UIImageView alloc]initWithImage:[UIImage imageNamed:@"表情_傻了"]];
+    showImageView.userInteractionEnabled = YES;
+    showImageView.center = self.center;
+    [self addSubview:showImageView];
+    
+    //增加点击事件
+    UITapGestureRecognizer *tapImgGesture = [[UITapGestureRecognizer alloc]initWithTarget:self action:@selector(userOnClick) ];
+    [showImageView addGestureRecognizer:tapImgGesture];
+    
+    //显示的文字
+    UILabel *showTextLabel = [[UILabel alloc]initWithFrame:CGRectMake(0, 0, kBaseWidth, 20) ];
+    showTextLabel.userInteractionEnabled = YES;
+    showTextLabel.text = showName;
+    showTextLabel.center = CGPointMake(self.center.x, showImageView.bottom+20);
+    showTextLabel.textAlignment = NSTextAlignmentCenter;
+    [self addSubview:showTextLabel];
+    
+    
+    //增加点击事件
+    UITapGestureRecognizer *tapLalGesture = [[UITapGestureRecognizer alloc]initWithTarget:self action:@selector(userOnClick) ];
+    [showTextLabel addGestureRecognizer:tapLalGesture];
+    
+    _reloadButtonBlock = block;
+    
+
+    
+}
+
+
+
+- (void)userOnClick{
+    //预先移除 之前View
+    [[self subviews]makeObjectsPerformSelector:@selector(removeFromSuperview) ];
+    
+    if (_reloadButtonBlock) {
+        _reloadButtonBlock(self);
+        
+        DTLog(@"self:%@",self);
+    }
+    
+}
+
+
+
+
 @end

@@ -20,7 +20,6 @@
 		394701D71DCC33C7003D6AF2 /* UIView+Expansion.m in Sources */ = {isa = PBXBuildFile; fileRef = 394701D61DCC33C7003D6AF2 /* UIView+Expansion.m */; };
 		394701DD1DCC60F7003D6AF2 /* Utils.m in Sources */ = {isa = PBXBuildFile; fileRef = 394701DC1DCC60F7003D6AF2 /* Utils.m */; };
 		394701E21DCC6226003D6AF2 /* UUIDShortener.m in Sources */ = {isa = PBXBuildFile; fileRef = 394701E11DCC6226003D6AF2 /* UUIDShortener.m */; };
-		396634891DC0A18D00F22D27 /* UIView+UIViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3966347D1DC0A18D00F22D27 /* UIView+UIViewController.m */; };
 		3966348A1DC0A18D00F22D27 /* CustomVerticalLabel+Extension.m in Sources */ = {isa = PBXBuildFile; fileRef = 3966347F1DC0A18D00F22D27 /* CustomVerticalLabel+Extension.m */; };
 		3966348B1DC0A18D00F22D27 /* UIButton+Extension.m in Sources */ = {isa = PBXBuildFile; fileRef = 396634811DC0A18D00F22D27 /* UIButton+Extension.m */; };
 		3966348C1DC0A18D00F22D27 /* UIColor+Random.m in Sources */ = {isa = PBXBuildFile; fileRef = 396634831DC0A18D00F22D27 /* UIColor+Random.m */; };
@@ -67,8 +66,6 @@
 		394701E11DCC6226003D6AF2 /* UUIDShortener.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = UUIDShortener.m; sourceTree = "<group>"; };
 		396634781DC09FF700F22D27 /* UIConfig.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = UIConfig.h; sourceTree = "<group>"; };
 		396634791DC0A18D00F22D27 /* CategoryConfig.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CategoryConfig.h; sourceTree = "<group>"; };
-		3966347C1DC0A18D00F22D27 /* UIView+UIViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIView+UIViewController.h"; sourceTree = "<group>"; };
-		3966347D1DC0A18D00F22D27 /* UIView+UIViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIView+UIViewController.m"; sourceTree = "<group>"; };
 		3966347E1DC0A18D00F22D27 /* CustomVerticalLabel+Extension.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "CustomVerticalLabel+Extension.h"; sourceTree = "<group>"; };
 		3966347F1DC0A18D00F22D27 /* CustomVerticalLabel+Extension.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "CustomVerticalLabel+Extension.m"; sourceTree = "<group>"; };
 		396634801DC0A18D00F22D27 /* UIButton+Extension.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIButton+Extension.h"; sourceTree = "<group>"; };
@@ -232,8 +229,6 @@
 			isa = PBXGroup;
 			children = (
 				396634791DC0A18D00F22D27 /* CategoryConfig.h */,
-				3966347C1DC0A18D00F22D27 /* UIView+UIViewController.h */,
-				3966347D1DC0A18D00F22D27 /* UIView+UIViewController.m */,
 				394701D51DCC33C7003D6AF2 /* UIView+Expansion.h */,
 				394701D61DCC33C7003D6AF2 /* UIView+Expansion.m */,
 				3966347E1DC0A18D00F22D27 /* CustomVerticalLabel+Extension.h */,
@@ -460,7 +455,6 @@
 				39B32FF81DC0B0A1000F7389 /* BaseNormalViewController.m in Sources */,
 				3966348A1DC0A18D00F22D27 /* CustomVerticalLabel+Extension.m in Sources */,
 				394701D71DCC33C7003D6AF2 /* UIView+Expansion.m in Sources */,
-				396634891DC0A18D00F22D27 /* UIView+UIViewController.m in Sources */,
 				394701DD1DCC60F7003D6AF2 /* Utils.m in Sources */,
 				39B32FF51DC0B01D000F7389 /* BaseViewController.m in Sources */,
 				3966348E1DC0A18D00F22D27 /* UITextField+Extension.m in Sources */,

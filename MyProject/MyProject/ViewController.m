@@ -11,7 +11,6 @@
 #import "AFHttpRequest+Test.h"
 
 
-
 @interface ViewController ()<UIWebViewDelegate,UITableViewDataSource,UITableViewDelegate>{
     
 }
@@ -32,39 +31,39 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     
-    //监听事件
-    [self.currentWebView.scrollView addObserver:self forKeyPath:@"contentSize" options:NSKeyValueObservingOptionNew context:nil];
-    
-    self.dataArray = [NSMutableArray arrayWithObjects:@"11",@"22",@"33",@"44", nil];
-    
-    self.currentWebView = [[UIWebView alloc]initWithFrame:[UIScreen mainScreen].bounds ];
-    self.currentWebView.autoresizingMask = UIViewAutoresizingFlexibleWidth | UIViewAutoresizingFlexibleHeight;
-    self.currentWebView.delegate = self;
-    self.currentWebView.scrollView.bounces = NO;
-    
-    
-    NSString *url = @"http://blog.csdn.net/sike2008";
-
-    
-    //网络请求Http
-    NSURLRequest *requestURL = [NSURLRequest requestWithURL:[NSURL URLWithString:url]];
-    [self.currentWebView loadRequest:requestURL];
-    
-    
-    
-
-    
-    
-    _currentTableView = [[UITableView alloc] initWithFrame:[UIScreen mainScreen].bounds style:UITableViewStylePlain];
-    _currentTableView.dataSource = self;
-    _currentTableView.delegate = self;
-    [self.view addSubview:_currentTableView];
-    
-    
-    //headView
-    _currentTableView.tableHeaderView = self.currentWebView;
-    
-    
+//    //监听事件
+//    [self.currentWebView.scrollView addObserver:self forKeyPath:@"contentSize" options:NSKeyValueObservingOptionNew context:nil];
+//    
+//    self.dataArray = [NSMutableArray arrayWithObjects:@"11",@"22",@"33",@"44", nil];
+//    
+//    self.currentWebView = [[UIWebView alloc]initWithFrame:[UIScreen mainScreen].bounds ];
+//    self.currentWebView.autoresizingMask = UIViewAutoresizingFlexibleWidth | UIViewAutoresizingFlexibleHeight;
+//    self.currentWebView.delegate = self;
+//    self.currentWebView.scrollView.bounces = NO;
+//    
+//    
+//    NSString *url = @"http://blog.csdn.net/sike2008";
+//
+//    
+//    //网络请求Http
+//    NSURLRequest *requestURL = [NSURLRequest requestWithURL:[NSURL URLWithString:url]];
+//    [self.currentWebView loadRequest:requestURL];
+//    
+//    
+//    
+//
+//    
+//    
+//    _currentTableView = [[UITableView alloc] initWithFrame:[UIScreen mainScreen].bounds style:UITableViewStylePlain];
+//    _currentTableView.dataSource = self;
+//    _currentTableView.delegate = self;
+//    [self.view addSubview:_currentTableView];
+//    
+//    
+//    //headView
+//    _currentTableView.tableHeaderView = self.currentWebView;
+//    
+//    
 //    AFHttpRequest *request = [[AFHttpRequest alloc]init ];
 //    [request testProgram:@""
 //                  params:nil
@@ -77,7 +76,13 @@
 //    } onError:^(NSError *error) {
 //        NSLog(@"发生错误!");
 //    }];
-  
+//  
+    
+    
+    
+    [self.view  userConfigView:@"表情_傻了" showName:@"请点击" ReloadButtonBlock:^(id sender) {
+    
+    }];
 }
 
 #pragma mark-
@@ -151,7 +156,7 @@
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath{
     [tableView deselectRowAtIndexPath:indexPath animated:YES];
     
-    [Utils alertWithTitle:@"" message:[self.dataArray objectAtIndex:5]];
+    [Utils alertWithTitle:@"" message:[self.dataArray objectAtIndex:indexPath.row]];
     
     
     

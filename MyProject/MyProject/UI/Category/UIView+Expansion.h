@@ -7,7 +7,7 @@
 //
 
 #import <UIKit/UIKit.h>
-
+@class BlankView;
 @interface UIView (Expand)
 @property CGPoint origin;
 @property CGSize size;
@@ -28,4 +28,20 @@
 - (void) moveBy: (CGPoint) delta;
 - (void) scaleBy: (CGFloat) scaleFactor;
 - (void) fitInSize: (CGSize) aSize;
+
+
+
+- (UIViewController *)viewController;
+
+//使用默认加载失败图片
+-(void)userConfigView:(NSString *)imageName showName:(NSString *)showName ReloadButtonBlock:(void(^)(id sender))block;
+
+
+@end
+
+
+
+@interface BlankView : UIView
+@property (nonatomic, copy) void(^reloadButtonBlock)(id sender);
+- (void)configView:(NSString *)imageName showName:(NSString *)showName ReloadButtonBlock:(void(^)(id sender))block;
 @end
