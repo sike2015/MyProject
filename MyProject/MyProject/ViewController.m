@@ -9,10 +9,10 @@
 #import "ViewController.h"
 #import "NSString+extension.h"
 #import "AFHttpRequest+Test.h"
-
+#import <Masonry.h>
 
 @interface ViewController ()<UIWebViewDelegate,UITableViewDataSource,UITableViewDelegate>{
-    
+    UILabel *_testLabel;
 }
 @property (nonatomic,strong) UIWebView *currentWebView;         //webView
 @property (nonatomic,strong) UITableView *currentTableView;     //tableView
@@ -80,9 +80,89 @@
     
     
     
-    [self.view  userConfigView:@"表情_傻了" showName:@"请点击" ReloadButtonBlock:^(id sender) {
+//    [self.view  userConfigView:@"表情_傻了" showName:@"请点击" ReloadButtonBlock:^(id sender) {
+//    
+//    }];
     
+    
+    
+    UILabel *label = [[UILabel alloc]init ];
+    label.backgroundColor = [UIColor greenColor];
+    label.text = @"房贷首付你的伤口酒囊饭袋就开始南非进口但是男方看见你的伤口烦恼的开始南方skkdsnfdksjnfjkdsnfjkdsnfjkdsnfjkdnsjkfndjksnfjkdsnfkjdnsfnjkdsnfjkdsqqqq的网上热是非得失";
+    label.numberOfLines = 1;
+    label.font = [UIFont systemFontOfSize:12.0f];
+    [label setLineBreakMode:NSLineBreakByTruncatingTail];
+    [self.view addSubview:label];
+    
+    
+//    _testLabel = [self testLabel];
+//    [self.view addSubview:_testLabel];
+    
+    
+    [label mas_makeConstraints:^(MASConstraintMaker *make) {
+        make.left.mas_equalTo(10);
+        make.top.mas_equalTo(50);
+        make.right.mas_equalTo(self.view.mas_right).offset(-25);
+        make.height.mas_equalTo(100);
     }];
+    
+    
+    
+    
+    label.attributedText = [self getAttributedStringWithString:label.text lineSpace:5 isFirst:YES];
+    
+    
+    
+    
+    
+    
+}
+
+
+- (UILabel *)testLabel {
+    if (!_testLabel) {
+        _testLabel = [[UILabel alloc] init];
+        _testLabel.numberOfLines = 3;
+        NSMutableParagraphStyle *style = [[NSMutableParagraphStyle alloc] init];
+        style.firstLineHeadIndent = 20;
+        style.tailIndent = -20;
+        style.lineBreakMode = NSLineBreakByTruncatingTail;
+        NSAttributedString *attributedText =
+        [[NSAttributedString alloc] initWithString: @"这是缩进文本这是缩进文本这是缩进文本这是缩进文本这是缩进文本这是缩进文本这是缩进文本这是缩进文本这是缩进文本这是缩进文本这是缩进文本这是缩进文本这是缩进文本这是缩进文本这是缩进文本这是缩进文本这是缩进文本这是缩进文本。"
+//                                        attributes: @{NSParagraphStyleAttributeName: style,
+//                                                      
+//                                                      NSFontAttributeName: NSParagraphStyleAttributeName}];
+         
+                                        attributes: @{NSParagraphStyleAttributeName: style,
+                                                      NSForegroundColorAttributeName:  [UIColor orangeColor] ,
+                                                      NSFontAttributeName: NSParagraphStyleAttributeName}];
+
+        _testLabel.attributedText = attributedText;
+    }
+    return _testLabel;
+}
+
+
+-(NSAttributedString *)getAttributedStringWithString:(NSString *)string lineSpace:(CGFloat)lineSpace isFirst:(BOOL)isFirst{
+    NSMutableAttributedString *attributedString = [[NSMutableAttributedString alloc] initWithString:string];
+    
+    
+    
+    NSMutableParagraphStyle *paragraphStyle = [[NSMutableParagraphStyle alloc] init];
+    paragraphStyle.lineSpacing = lineSpace;     // 调整行间距
+    paragraphStyle.alignment = NSTextAlignmentJustified;
+    paragraphStyle.lineBreakMode = NSLineBreakByTruncatingTail;
+    
+    
+    //是否需要首行缩进
+    if (isFirst) {
+        [paragraphStyle setFirstLineHeadIndent:30];   //首行缩进
+//        paragraphStyle.tailIndent = -30;
+    }
+    
+    NSRange range = NSMakeRange(0, [string length]);
+    [attributedString addAttribute:NSParagraphStyleAttributeName value:paragraphStyle range:range];
+    return attributedString;
 }
 
 #pragma mark-
