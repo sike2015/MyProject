@@ -8,6 +8,13 @@
 
 #import "BaseNormalViewController.h"
 
+//基类里面 使用宏定义
+#define kControlOriginX 10
+#define kControlOriginY 9
+
+#define kControlWidth 50
+#define kControlHeight 28
+
 @interface BaseNormalViewController ()<UITableViewDataSource,UITableViewDelegate>
 
 @end
@@ -141,6 +148,9 @@
     
     
 }
+
+
+
 
 
 

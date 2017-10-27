@@ -27,7 +27,7 @@
     label.center = self.view.center;
     [self.view addSubview:label];
     
-    [LoadingHUD showLoadingView];
+//    [LoadingHUD showLoadingView];
     
     
     

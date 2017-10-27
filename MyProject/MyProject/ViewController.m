@@ -30,53 +30,7 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    
-//    //监听事件
-//    [self.currentWebView.scrollView addObserver:self forKeyPath:@"contentSize" options:NSKeyValueObservingOptionNew context:nil];
-//    
-//    self.dataArray = [NSMutableArray arrayWithObjects:@"11",@"22",@"33",@"44", nil];
-//    
-//    self.currentWebView = [[UIWebView alloc]initWithFrame:[UIScreen mainScreen].bounds ];
-//    self.currentWebView.autoresizingMask = UIViewAutoresizingFlexibleWidth | UIViewAutoresizingFlexibleHeight;
-//    self.currentWebView.delegate = self;
-//    self.currentWebView.scrollView.bounces = NO;
-//    
-//    
-//    NSString *url = @"http://blog.csdn.net/sike2008";
-//
-//    
-//    //网络请求Http
-//    NSURLRequest *requestURL = [NSURLRequest requestWithURL:[NSURL URLWithString:url]];
-//    [self.currentWebView loadRequest:requestURL];
-//    
-//    
-//    
-//
-//    
-//    
-//    _currentTableView = [[UITableView alloc] initWithFrame:[UIScreen mainScreen].bounds style:UITableViewStylePlain];
-//    _currentTableView.dataSource = self;
-//    _currentTableView.delegate = self;
-//    [self.view addSubview:_currentTableView];
-//    
-//    
-//    //headView
-//    _currentTableView.tableHeaderView = self.currentWebView;
-//    
-//    
-//    AFHttpRequest *request = [[AFHttpRequest alloc]init ];
-//    [request testProgram:@""
-//                  params:nil
-//            onCompletion:^(id result) {
-//                NSLog(@"得到解析结果result:%@",result);
-//                
-//                
-//                
-//                
-//    } onError:^(NSError *error) {
-//        NSLog(@"发生错误!");
-//    }];
-//  
+  
     
     
     
@@ -94,10 +48,7 @@
     [label setLineBreakMode:NSLineBreakByTruncatingTail];
     [self.view addSubview:label];
     
-    
-//    _testLabel = [self testLabel];
-//    [self.view addSubview:_testLabel];
-    
+
     
     [label mas_makeConstraints:^(MASConstraintMaker *make) {
         make.left.mas_equalTo(10);
@@ -111,8 +62,70 @@
     
     label.attributedText = [self getAttributedStringWithString:label.text lineSpace:5 isFirst:YES];
     
-    
-    
+//    #define kPrice 60.0f  //满多少减去钻石
+//
+//    int total = 3400;    //总数量
+//    float price = 0.6;      //每个钻石得到价格
+//    int day = 1;        //天数 从第一天开始算
+//
+//    double tempSum =0;     //临时总价格
+//    double sum =0;      //总分红
+//    NSString *sumStr;
+//
+//
+//    NSString *path = @"/Users/xiaoyusu/Desktop/商家推荐20.4万元 每日分红.txt";
+//    NSError *error;
+//
+//    do {
+//
+//        //每天分红
+//        float currentPrice = total*price;
+//
+//        //累计总价格
+//        sum = sum+currentPrice;
+//
+//        tempSum = tempSum+ currentPrice;
+//
+//
+//
+//
+//        if (tempSum>=kPrice) { //如果累积满60 减去一颗钻石 同时减去临时总价格
+//            int gemNum = tempSum/kPrice;  //减去的宝石数量
+//            total = total-gemNum;
+//            tempSum = tempSum-(gemNum*kPrice);
+//        }
+//
+//
+//
+//        NSString *sumProfit = [NSString stringWithFormat:@"用户每天实际到账:%.1f",currentPrice*0.70];
+//
+//        NSLog(@"sumProfit:%@",sumProfit);
+//
+//        NSString *tempSumStr = [NSString stringWithFormat:@"第%d天---- 每天分红:%.1f----剩余钻石:%d----总分红:%.1f---实际总到账:%.1f",day,currentPrice,total,sum,sum*0.70];
+//
+//        NSLog(@"tempSum:%@",tempSumStr);
+//
+//
+//        sumStr = [NSString stringWithFormat:@"%@\n%@\n%@\n",sumStr.length >0?sumStr:@"",sumProfit,tempSumStr];
+//
+//
+////        if ((total*price/500) ==0) {
+////            NSLog(@"因钻石不再减少 停止计算");
+////            break;
+////        }
+//
+//        day = day+1;
+//
+//    } while (total >1);
+//
+//
+//
+//    [sumStr writeToFile:path atomically:YES encoding:NSUTF8StringEncoding error:&error];
+//    if (error) {
+//        NSLog(@"导出失败:%@",error);
+//    }else{
+//        NSLog(@"导出成功");
+//    }
     
     
     
@@ -129,10 +142,7 @@
         style.lineBreakMode = NSLineBreakByTruncatingTail;
         NSAttributedString *attributedText =
         [[NSAttributedString alloc] initWithString: @"这是缩进文本这是缩进文本这是缩进文本这是缩进文本这是缩进文本这是缩进文本这是缩进文本这是缩进文本这是缩进文本这是缩进文本这是缩进文本这是缩进文本这是缩进文本这是缩进文本这是缩进文本这是缩进文本这是缩进文本这是缩进文本。"
-//                                        attributes: @{NSParagraphStyleAttributeName: style,
-//                                                      
-//                                                      NSFontAttributeName: NSParagraphStyleAttributeName}];
-         
+
                                         attributes: @{NSParagraphStyleAttributeName: style,
                                                       NSForegroundColorAttributeName:  [UIColor orangeColor] ,
                                                       NSFontAttributeName: NSParagraphStyleAttributeName}];

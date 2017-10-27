@@ -8,6 +8,7 @@
 
 #import "AppDelegate.h"
 #import "AppDelegate+GoViewController.h"
+#import "RootViewController.h"
 
 @interface AppDelegate ()
 
@@ -20,19 +21,18 @@
     // Override point for customization after application launch.
     
     
-//    //网络更新
-//    [JSPatch startWithAppKey:@"d4c7b6428f8a5a6e"];
-//    [JSPatch sync];
-    
-    
-
-    
-    
-    
 //    dispatch_after(dispatch_time(DISPATCH_TIME_NOW, (int64_t)(2 * NSEC_PER_SEC)), dispatch_get_main_queue(), ^{
 //        NSLog(@"延迟2秒后 ");
 //        [self test];
 //    });
+//
+    
+    self.window = [[UIWindow alloc] initWithFrame:[[UIScreen mainScreen] bounds]];
+    self.window.backgroundColor = [UIColor whiteColor];
+    RootViewController *rootVC = [[RootViewController alloc]init ];
+    self.window.rootViewController = rootVC;
+    [self.window makeKeyAndVisible];
+    
     
     return YES;
 }

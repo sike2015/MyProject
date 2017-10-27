@@ -8,6 +8,8 @@
 
 #import <CoreLocation/CoreLocation.h>
 
+
+
 #ifndef Project_Commonfig_h
 #define Project_Commonfig_h
 
@@ -36,6 +38,23 @@
 
 // Degrees to radians 角度转弧度
 #define DEGREES_TO_RADIANS(angle) ((angle) / 180.0 * M_PI)
+
+
+
+//安全检查使用对象  add by zuoweijie
+#define IsNOTNullOrEmptyOfArray(_ARRAY___) (_ARRAY___ && [_ARRAY___ isKindOfClass:[NSArray class]] && [_ARRAY___ count])
+#define IsNOTNullOrEmptyOfDictionary(_DICTIONARY___) (_DICTIONARY___ && [_DICTIONARY___ isKindOfClass:[NSDictionary class]] && [_DICTIONARY___ count])
+#define IsNOTNullOrEmptyOfNSString(_STRING___) (_STRING___ && [_STRING___ isKindOfClass:[NSString class]] && [_STRING___ length])
+#define IsNOTNullOrEmptyOfNSNumber(_NUMBER___) (_NUMBER___ && [_NUMBER___ isKindOfClass:[NSNumber class]] )
+#define IsNullObj(____object____) ((____object____ && [____object____ isKindOfClass: [NSNull class]]) || (____object____ == nil))
+#define SafeToInitSomeString(_STRING__)  (( IsNOTNullOrEmptyOfNSString(_STRING__))?(_STRING__):@"")
+#define SafeToInitSomeNSNumber(_NSNUMBER__)  (( IsNOTNullOrEmptyOfNSNumber(_NSNUMBER__))?(_NSNUMBER__):0)
+
+//判断是否空字符串
+#define isNullString(s)         (!s || [s isEqual:[NSNull null]] || [s isEqualToString:@""])
+#define kNilOrNull(__ref) (((__ref) == nil) || ([(__ref) isEqual:[NSNull null]]))
+
+#define delegateWindow               [[UIApplication sharedApplication].delegate window]
 
 
 

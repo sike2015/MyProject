@@ -17,5 +17,12 @@
 @property (nonatomic,strong) CustomVerticalLabel *leftTitle;    //左侧标题
 @property (nonatomic,strong) UIButton *rightButton;             //右侧的button
 @property (nonatomic,strong) CustomVerticalLabel *rightTitle;   //右侧标题
-@property (nonatomic,strong)UIImageView *lineView;   //下划线
+@property (nonatomic,strong) UIImageView *lineView;   //下划线
+
+//创建PlainTableView
+- (UITableView *)createPlainTableView;
+
+//section Head foot 跟随走
+- (UITableView*)createGroupedTableView;
+
 @end
