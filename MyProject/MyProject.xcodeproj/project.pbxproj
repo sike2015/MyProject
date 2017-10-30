@@ -27,6 +27,7 @@
 		39E55ADF1E261069009AB78E /* AFHttpRequest+Test.m in Sources */ = {isa = PBXBuildFile; fileRef = 39E55ADE1E261069009AB78E /* AFHttpRequest+Test.m */; };
 		4E76F823758DDF053D5CB505 /* libPods-MyProject.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 8E088CDF3DEE8172DB44AD74 /* libPods-MyProject.a */; };
 		9C0529691FA2D94C0030E0E2 /* test1ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 9C0529681FA2D94C0030E0E2 /* test1ViewController.m */; };
+		9C467EF31FA7085400717FDC /* test2ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 9C467EF21FA7085400717FDC /* test2ViewController.m */; };
 		9C9BBB6F1FA1EF49003EBD3A /* CustomVerticalLabel+Extension.m in Sources */ = {isa = PBXBuildFile; fileRef = 9C9BBB5A1FA1EF49003EBD3A /* CustomVerticalLabel+Extension.m */; };
 		9C9BBB701FA1EF49003EBD3A /* NSArray+Safe.m in Sources */ = {isa = PBXBuildFile; fileRef = 9C9BBB5C1FA1EF49003EBD3A /* NSArray+Safe.m */; };
 		9C9BBB711FA1EF49003EBD3A /* NSDictionary+Safe.m in Sources */ = {isa = PBXBuildFile; fileRef = 9C9BBB5E1FA1EF49003EBD3A /* NSDictionary+Safe.m */; };
@@ -89,6 +90,8 @@
 		9412BD434C4219A816B9D097 /* Pods-MyProject.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MyProject.debug.xcconfig"; path = "Pods/Target Support Files/Pods-MyProject/Pods-MyProject.debug.xcconfig"; sourceTree = "<group>"; };
 		9C0529671FA2D94C0030E0E2 /* test1ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = test1ViewController.h; sourceTree = "<group>"; };
 		9C0529681FA2D94C0030E0E2 /* test1ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = test1ViewController.m; sourceTree = "<group>"; };
+		9C467EF11FA7085400717FDC /* test2ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = test2ViewController.h; sourceTree = "<group>"; };
+		9C467EF21FA7085400717FDC /* test2ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = test2ViewController.m; sourceTree = "<group>"; };
 		9C9BBB581FA1EF49003EBD3A /* CategoryConfig.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CategoryConfig.h; sourceTree = "<group>"; };
 		9C9BBB591FA1EF49003EBD3A /* CustomVerticalLabel+Extension.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "CustomVerticalLabel+Extension.h"; sourceTree = "<group>"; };
 		9C9BBB5A1FA1EF49003EBD3A /* CustomVerticalLabel+Extension.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "CustomVerticalLabel+Extension.m"; sourceTree = "<group>"; };
@@ -166,6 +169,8 @@
 				390699B01DC08DC9005FE694 /* ViewController.m */,
 				9C0529671FA2D94C0030E0E2 /* test1ViewController.h */,
 				9C0529681FA2D94C0030E0E2 /* test1ViewController.m */,
+				9C467EF11FA7085400717FDC /* test2ViewController.h */,
+				9C467EF21FA7085400717FDC /* test2ViewController.m */,
 				39E55ADD1E261069009AB78E /* AFHttpRequest+Test.h */,
 				39E55ADE1E261069009AB78E /* AFHttpRequest+Test.m */,
 				390699B21DC08DC9005FE694 /* Main.storyboard */,
@@ -473,6 +478,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				390699B11DC08DC9005FE694 /* ViewController.m in Sources */,
+				9C467EF31FA7085400717FDC /* test2ViewController.m in Sources */,
 				39B330061DC0BCC4000F7389 /* GlobalShare.m in Sources */,
 				396634941DC0A25200F22D27 /* CustomTextField.m in Sources */,
 				390699AE1DC08DC9005FE694 /* AppDelegate.m in Sources */,

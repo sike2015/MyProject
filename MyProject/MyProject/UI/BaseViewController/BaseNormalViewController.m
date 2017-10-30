@@ -12,8 +12,8 @@
 #define kControlOriginX 10
 #define kControlOriginY 9
 
-#define kControlWidth 50
-#define kControlHeight 28
+#define kControlWidth 22
+#define kControlHeight 22
 
 @interface BaseNormalViewController ()<UITableViewDataSource,UITableViewDelegate>
 
@@ -25,7 +25,7 @@
 #pragma mark CreateTableView Method
 //创建PlainTableView
 - (UITableView *)createPlainTableView{
-    UITableView *tableView = [[UITableView alloc] initWithFrame:self.view.bounds style:UITableViewStylePlain];
+    UITableView *tableView = [[UITableView alloc] initWithFrame:CGRectMake(CGRectZero.origin.x, kNavigationBarHeight, kBaseWidth, kBaseHeight-kNavigationBarHeight) style:UITableViewStylePlain];
     tableView.autoresizingMask = UIViewAutoresizingFlexibleHeight | UIViewAutoresizingFlexibleWidth;
     tableView.delegate = self;
     tableView.dataSource = self;
@@ -119,6 +119,17 @@
     //右侧
     [self navbarRightClick];
     
+ 
+}
+
+
+
+//设置标题名字
+- (void)setTitleName:(NSString *)titleName{
+    _titleName = titleName;
+    
+    //标题
+    self.navigationBar.titleLabel.text = _titleName;
     
 }
 
@@ -135,7 +146,7 @@
     
     //自定义navigationBar 颜色
     self.navigationBar = [[CustNavigationBar alloc]initWithFrame:CGRectMake(CGRectZero.origin.x, CGRectZero.origin.y, self.view.bounds.size.width, kNavigationBarHeight) ];
-    self.navigationBar.backgroundColor = [UIColor whiteColor];
+    self.navigationBar.backgroundColor = [UIColor clearColor];
     self.navigationBar.shadowNeeded = NO;  //关闭阴影
     self.navigationBar.userInteractionEnabled = YES; //开启点击事件
     [self.view addSubview:self.navigationBar];
@@ -151,7 +162,10 @@
 
 
 
-
+//返回上一级菜单
+- (void)goBack{
+    [self.navigationController popViewControllerAnimated:YES];
+}
 
 
 //导航栏左侧按纽点击事件
@@ -164,7 +178,7 @@
     }
     
     //返回按钮
-    self.leftButton = [UIButton createButton:CGRectMake(kControlOriginX, kControlOriginY, 22, 22) normalImage:@"back_new"  action:@selector(goBack) addTarget:self];
+    self.leftButton = [UIButton createButton:CGRectMake(kControlOriginX, kControlOriginY, kControlWidth, kControlHeight) normalImage:@"back_new"  action:@selector(goBack) addTarget:self];
     self.leftButton.center = CGPointMake(self.leftButton.center.x, self.navigationBar.center.y);
     [self.navigationBar addSubview:self.leftButton];
     

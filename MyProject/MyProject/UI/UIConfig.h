@@ -54,15 +54,14 @@
 
 
 //基础View坐标值
-#define kNavigationBarHeight 44
 
 #define kBaseOriginX 0
 #define kBaseOriginY 0
 #define kBaseWidth [UIScreen mainScreen].bounds.size.width
 #define kBaseHeight [UIScreen mainScreen].bounds.size.height
-#define kNavigationBarHeight 44
+#define kNavigationBarHeight 64
 #define kTabBarHeight 49     //tabBar高度
-#define kTopHeight 64        //获得navigation高度
+
 
 
 #endif /* UIConfig_h */

@@ -42,9 +42,10 @@
     
     
     AFHTTPSessionManager *manager = [AFHTTPSessionManager manager];
-    manager.responseSerializer = [AFHTTPResponseSerializer serializer];
-    
-    //增加头部header
+    //申明返回的结果是json类型
+    manager.responseSerializer = [AFJSONResponseSerializer serializer];
+    //申明请求的数据是json类型
+    manager.requestSerializer=[AFJSONRequestSerializer serializer];
 
     if ([method isEqualToString:kGET]) {
         [manager GET:url
@@ -53,7 +54,10 @@
                 
             } success:^(NSURLSessionDataTask * _Nonnull task, id  _Nullable responseObject) {
   
+                
+                //增加头部header
                 NSError *error = nil;
+                
                 id jsonObject = [NSJSONSerialization JSONObjectWithData:responseObject options:NSJSONReadingMutableLeaves error:&error];
 
                 if ([jsonObject isKindOfClass:[NSDictionary class]]){
@@ -67,7 +71,6 @@
                     }
                     else{
                         NSLog(@"解析错误!");
-//                        [TheAppDelegate goLoginVC];
                     }
                     
                     
@@ -90,6 +93,32 @@
              progress:^(NSProgress * _Nonnull uploadProgress) {
             
         } success:^(NSURLSessionDataTask * _Nonnull task, id  _Nullable responseObject) {
+            
+            //增加头部header
+            NSError *error = nil;
+            
+            id jsonObject = [NSJSONSerialization JSONObjectWithData:responseObject options:NSJSONReadingMutableLeaves error:&error];
+            
+            if ([jsonObject isKindOfClass:[NSDictionary class]]){
+                
+                NSDictionary *deserializedDictionary = (NSDictionary *)jsonObject;
+                
+                NSInteger stateCode = [deserializedDictionary[@"stateCode"]integerValue ];
+                
+                if (stateCode ==100) {
+                    onCompletion(deserializedDictionary);
+                }
+                else{
+                    NSLog(@"解析错误!");
+                }
+                
+                
+                
+                
+            }else {
+                NSLog(@"An error happened while deserializing the JSON data.");
+                
+            }
             
         } failure:^(NSURLSessionDataTask * _Nullable task, NSError * _Nonnull error) {
             

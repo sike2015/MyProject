@@ -8,6 +8,7 @@
 
 #import "RootViewController.h"
 #import "test1ViewController.h"
+#import "test2ViewController.h"
 
 @interface RootViewController ()
 
@@ -40,7 +41,7 @@
                           tagIndex:0];
     
     //测试2
-    UIViewController *test2VC  = [[UIViewController alloc] init];
+    test2ViewController *test2VC  = [[test2ViewController alloc] init];
     test2VC.view.backgroundColor = [UIColor orangeColor];
     [self setupChildViewController:test2VC
                              title:@"测试2"
@@ -100,6 +101,7 @@
     
     //设置导航空控制器
     UINavigationController *nav = [[UINavigationController alloc] initWithRootViewController:childVC];
+    nav.navigationBarHidden = YES;  //隐藏导航条
     nav.tabBarItem.tag = tagIndex;
     
     [self addChildViewController:nav];}

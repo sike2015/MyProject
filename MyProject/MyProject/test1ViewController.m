@@ -7,6 +7,7 @@
 //
 
 #import "test1ViewController.h"
+#import "test2ViewController.h"
 
 @interface test1ViewController ()
 @property (nonatomic,strong) UITableView *tableView;
@@ -54,6 +55,14 @@
     }
     cell.textLabel.text = [self.dataArray safeObjectAtIndex:indexPath.row];
     return cell;
+}
+
+
+- (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath{
+    [tableView deselectRowAtIndexPath:indexPath animated:YES];
+    
+    test2ViewController *test2VC = [[test2ViewController alloc]init ];
+    [self.navigationController pushViewController:test2VC animated:YES];
 }
 
 
