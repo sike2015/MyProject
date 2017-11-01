@@ -52,6 +52,9 @@
 #define kFont9                  fontWithSize(9) // 广告标签
 
 
+//占位图name
+#define COMMON_PIC_PLACEHOLDER  @"通用_default_img"      
+
 
 //基础View坐标值
 
@@ -62,6 +65,16 @@
 #define kNavigationBarHeight 64
 #define kTabBarHeight 49     //tabBar高度
 
+
+//限制字符长度
+#define kRemarkText  100    //备注字符串长度
+
+#define kMaxPasswordLength 16   //最大密码长度
+#define kMaxNicknameLength 10   //最大昵称长度
+
+#define kMaxAddrLength 100   //最大地址长度
+#define kMaxNameLength 30    //收货人姓名长度
+#define kMaxPhoneLength 11   //电话号码长度
 
 
 #endif /* UIConfig_h */

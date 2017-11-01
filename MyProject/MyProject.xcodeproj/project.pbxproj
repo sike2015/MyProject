@@ -36,8 +36,6 @@
 		9C9BBB741FA1EF49003EBD3A /* UIColor+colorWithHexString.m in Sources */ = {isa = PBXBuildFile; fileRef = 9C9BBB641FA1EF49003EBD3A /* UIColor+colorWithHexString.m */; };
 		9C9BBB751FA1EF49003EBD3A /* UIColor+Random.m in Sources */ = {isa = PBXBuildFile; fileRef = 9C9BBB661FA1EF49003EBD3A /* UIColor+Random.m */; };
 		9C9BBB761FA1EF49003EBD3A /* UIImage+ZTHColor.m in Sources */ = {isa = PBXBuildFile; fileRef = 9C9BBB681FA1EF49003EBD3A /* UIImage+ZTHColor.m */; };
-		9C9BBB771FA1EF49003EBD3A /* UIImageView+Extension.m in Sources */ = {isa = PBXBuildFile; fileRef = 9C9BBB6A1FA1EF49003EBD3A /* UIImageView+Extension.m */; };
-		9C9BBB781FA1EF49003EBD3A /* UITextField+Extension.m in Sources */ = {isa = PBXBuildFile; fileRef = 9C9BBB6C1FA1EF49003EBD3A /* UITextField+Extension.m */; };
 		9C9BBB791FA1EF49003EBD3A /* UIView+Expansion.m in Sources */ = {isa = PBXBuildFile; fileRef = 9C9BBB6E1FA1EF49003EBD3A /* UIView+Expansion.m */; };
 		9C9BBB7D1FA1EFD6003EBD3A /* RootViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 9C9BBB7C1FA1EFD6003EBD3A /* RootViewController.m */; };
 		9C9BBB811FA1F00B003EBD3A /* LoginViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 9C9BBB801FA1F00B003EBD3A /* LoginViewController.m */; };
@@ -90,6 +88,7 @@
 		9412BD434C4219A816B9D097 /* Pods-MyProject.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MyProject.debug.xcconfig"; path = "Pods/Target Support Files/Pods-MyProject/Pods-MyProject.debug.xcconfig"; sourceTree = "<group>"; };
 		9C0529671FA2D94C0030E0E2 /* test1ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = test1ViewController.h; sourceTree = "<group>"; };
 		9C0529681FA2D94C0030E0E2 /* test1ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = test1ViewController.m; sourceTree = "<group>"; };
+		9C420A941FA9AB7000DBA3DC /* ModelConfig.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ModelConfig.h; sourceTree = "<group>"; };
 		9C467EF11FA7085400717FDC /* test2ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = test2ViewController.h; sourceTree = "<group>"; };
 		9C467EF21FA7085400717FDC /* test2ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = test2ViewController.m; sourceTree = "<group>"; };
 		9C9BBB581FA1EF49003EBD3A /* CategoryConfig.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CategoryConfig.h; sourceTree = "<group>"; };
@@ -109,10 +108,6 @@
 		9C9BBB661FA1EF49003EBD3A /* UIColor+Random.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIColor+Random.m"; sourceTree = "<group>"; };
 		9C9BBB671FA1EF49003EBD3A /* UIImage+ZTHColor.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIImage+ZTHColor.h"; sourceTree = "<group>"; };
 		9C9BBB681FA1EF49003EBD3A /* UIImage+ZTHColor.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIImage+ZTHColor.m"; sourceTree = "<group>"; };
-		9C9BBB691FA1EF49003EBD3A /* UIImageView+Extension.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIImageView+Extension.h"; sourceTree = "<group>"; };
-		9C9BBB6A1FA1EF49003EBD3A /* UIImageView+Extension.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIImageView+Extension.m"; sourceTree = "<group>"; };
-		9C9BBB6B1FA1EF49003EBD3A /* UITextField+Extension.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UITextField+Extension.h"; sourceTree = "<group>"; };
-		9C9BBB6C1FA1EF49003EBD3A /* UITextField+Extension.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UITextField+Extension.m"; sourceTree = "<group>"; };
 		9C9BBB6D1FA1EF49003EBD3A /* UIView+Expansion.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIView+Expansion.h"; sourceTree = "<group>"; };
 		9C9BBB6E1FA1EF49003EBD3A /* UIView+Expansion.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIView+Expansion.m"; sourceTree = "<group>"; };
 		9C9BBB7B1FA1EFD6003EBD3A /* RootViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RootViewController.h; sourceTree = "<group>"; };
@@ -194,6 +189,7 @@
 		390699C01DC08EC7005FE694 /* BLL */ = {
 			isa = PBXGroup;
 			children = (
+				9C420A901FA9AB4B00DBA3DC /* Model */,
 				396634961DC0A28200F22D27 /* BLLConfig.h */,
 				39B330081DC0C118000F7389 /* AFRequest.h */,
 				39B330091DC0C118000F7389 /* AFRequest.m */,
@@ -296,12 +292,20 @@
 			name = Pods;
 			sourceTree = "<group>";
 		};
+		9C420A901FA9AB4B00DBA3DC /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				9C420A941FA9AB7000DBA3DC /* ModelConfig.h */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
 		9C9BBB571FA1EF49003EBD3A /* Category */ = {
 			isa = PBXGroup;
 			children = (
+				9C9BBB581FA1EF49003EBD3A /* CategoryConfig.h */,
 				9C9BBB831FA1F033003EBD3A /* AppDelegate+GoViewController.h */,
 				9C9BBB821FA1F033003EBD3A /* AppDelegate+GoViewController.m */,
-				9C9BBB581FA1EF49003EBD3A /* CategoryConfig.h */,
 				9C9BBB591FA1EF49003EBD3A /* CustomVerticalLabel+Extension.h */,
 				9C9BBB5A1FA1EF49003EBD3A /* CustomVerticalLabel+Extension.m */,
 				9C9BBB5B1FA1EF49003EBD3A /* NSArray+Safe.h */,
@@ -318,10 +322,6 @@
 				9C9BBB661FA1EF49003EBD3A /* UIColor+Random.m */,
 				9C9BBB671FA1EF49003EBD3A /* UIImage+ZTHColor.h */,
 				9C9BBB681FA1EF49003EBD3A /* UIImage+ZTHColor.m */,
-				9C9BBB691FA1EF49003EBD3A /* UIImageView+Extension.h */,
-				9C9BBB6A1FA1EF49003EBD3A /* UIImageView+Extension.m */,
-				9C9BBB6B1FA1EF49003EBD3A /* UITextField+Extension.h */,
-				9C9BBB6C1FA1EF49003EBD3A /* UITextField+Extension.m */,
 				9C9BBB6D1FA1EF49003EBD3A /* UIView+Expansion.h */,
 				9C9BBB6E1FA1EF49003EBD3A /* UIView+Expansion.m */,
 			);
@@ -491,10 +491,8 @@
 				394701DD1DCC60F7003D6AF2 /* Utils.m in Sources */,
 				9C9BBB841FA1F033003EBD3A /* AppDelegate+GoViewController.m in Sources */,
 				39B32FF51DC0B01D000F7389 /* BaseViewController.m in Sources */,
-				9C9BBB781FA1EF49003EBD3A /* UITextField+Extension.m in Sources */,
 				9C9BBB7D1FA1EFD6003EBD3A /* RootViewController.m in Sources */,
 				9C9BBB811FA1F00B003EBD3A /* LoginViewController.m in Sources */,
-				9C9BBB771FA1EF49003EBD3A /* UIImageView+Extension.m in Sources */,
 				9C9BBB701FA1EF49003EBD3A /* NSArray+Safe.m in Sources */,
 				390699AB1DC08DC9005FE694 /* main.m in Sources */,
 				9C9BBB721FA1EF49003EBD3A /* NSString+extension.m in Sources */,

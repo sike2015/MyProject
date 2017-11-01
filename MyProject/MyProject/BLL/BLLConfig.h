@@ -24,15 +24,8 @@
 #define kWebSiteURL @"http://test.tianpingpai.com/"
 
 
-//正式服务器测试地址
-//#define kWebSiteURL @"http://release.tianpingpai.com/"
-
-////正式服务器
 //#define kWebSiteURL @"http://api.tianpingpai.com/"
-//
-////积分商城
-//#define kIntegralURL @"http://m.tianpingpai.com/"
-#define kIntegralURL @"http://test.tianpingpai.com/"
+
 
 
 /**
@@ -209,15 +202,6 @@
 
 
 #define kSystemAlert                  @"SystemAlert"                            //系统提示 
-#define kSaveUserInfo                 @"saveUserInfo"                           //用户存储信息
-#define kSystemInfo                   @"systemInfo"                             //系统信息
-#define kShoppingInfo                 @"ShoppingInfo"                           //购物车信息
-#define kEquipIdInfo                  @"EquipIdInfo"                            //系统唯一标示 
-
-
-#define kPrefabricateDictInfo         @"PrefabricateDictInfo"                   //预制购物车信息字典
-#define kVersionDictInfo              @"VersionDictInfo"                        //版本信息
-
 
 
 
