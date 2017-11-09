@@ -23,7 +23,7 @@
     [self setupTabbar];
     
     //默认选择第一个
-    self.selectedIndex = 0;
+    self.selectedIndex = 1;
 }
 
 

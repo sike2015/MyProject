@@ -14,19 +14,19 @@ PODS:
   - AFNetworking/Serialization (3.1.0)
   - AFNetworking/UIKit (3.1.0):
     - AFNetworking/NSURLSession
-  - IQKeyboardManager (4.0.7)
-  - Masonry (1.0.2)
+  - IQKeyboardManager (5.0.6)
+  - Masonry (1.1.0)
   - MBProgressHUD (1.0.0)
-  - MJRefresh (3.1.12)
-  - SDWebImage (3.8.2):
-    - SDWebImage/Core (= 3.8.2)
-  - SDWebImage/Core (3.8.2)
-  - SVProgressHUD (2.0.3)
-  - TZImagePickerController (1.7.1)
+  - MJRefresh (3.1.15)
+  - SDWebImage (4.2.2):
+    - SDWebImage/Core (= 4.2.2)
+  - SDWebImage/Core (4.2.2)
+  - SVProgressHUD (2.2.2)
+  - TZImagePickerController (1.9.4)
   - UIActionSheet+Blocks (0.9)
   - UIAlertView+Blocks (0.9)
   - UTDID (1.0.0)
-  - WZLBadge (1.2.5)
+  - WZLBadge (1.2.6)
   - YYModel (1.0.4)
 
 DEPENDENCIES:
@@ -46,19 +46,19 @@ DEPENDENCIES:
 
 SPEC CHECKSUMS:
   AFNetworking: 5e0e199f73d8626b11e79750991f5d173d1f8b67
-  IQKeyboardManager: 69002bb4fea60596b710e57d426abc00e5063630
-  Masonry: 7c429b56da9d4ee0bbb3ed77a5ea710d6a5df39e
+  IQKeyboardManager: 077b7f691dfa9d69db9cff66f2bed68ebfc02d9b
+  Masonry: 678fab65091a9290e40e2832a55e7ab731aad201
   MBProgressHUD: 4890f671c94e8a0f3cf959aa731e9de2f036d71a
-  MJRefresh: b96cdb21c4aa75a7b07654311ab2f315c497e806
-  SDWebImage: 098e97e6176540799c27e804c96653ee0833d13c
-  SVProgressHUD: b0830714205bea1317ea1a2ebc71e5633af334d4
-  TZImagePickerController: cbfd57ba947263759b860f74132dd1bc33125afc
+  MJRefresh: 9af70f5f9327a2cf87f0fb5929f35fcc2fa638ea
+  SDWebImage: 89a9d32cd520bbb46eb14e541d5109b3564af198
+  SVProgressHUD: 59b2d3dabacbd051576d21d32293ca7228dc18b0
+  TZImagePickerController: 3f5383c7eae8ab9971a94690c2af6a3a72520319
   UIActionSheet+Blocks: e180b7dad0a721ab7f212ac9742af799008bb358
   UIAlertView+Blocks: a46c99c5144f6c5dbc7d62fd2a0678daceec89a3
   UTDID: 05c4737c8cf5c210e86d0235570816ed00e023e8
-  WZLBadge: 16c08aa0a645e2591690f21cbcb410a3d878c7ac
+  WZLBadge: 9ec779dcfd94c825518b395e8315fccaabff1bfa
   YYModel: 2a7fdd96aaa4b86a824e26d0c517de8928c04b30
 
 PODFILE CHECKSUM: 9eb9d0e89be02e3506e5160457db35ad27e91228
 
-COCOAPODS: 1.1.1
+COCOAPODS: 1.2.1

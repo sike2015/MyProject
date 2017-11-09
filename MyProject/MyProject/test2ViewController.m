@@ -21,6 +21,56 @@
     self.titleName =@"测试2";
     
     self.view.backgroundColor = [UIColor orangeColor];
+    
+    
+    
+    UIImageView *showImageView = [[UIImageView alloc]init ];
+    showImageView.backgroundColor = [UIColor greenColor];
+    [self.view addSubview:showImageView];
+    
+    
+    [showImageView mas_makeConstraints:^(MASConstraintMaker *make) {
+        make.top.mas_equalTo(self.view).mas_offset(150);
+        make.left.mas_equalTo(self.view).mas_offset(50);
+        make.width.mas_equalTo(112);
+        make.height.mas_equalTo(73);
+    }];
+    
+    
+    UILabel *addressLabel = [[UILabel alloc]init ];
+    addressLabel.textColor = [UIColor blackColor];
+    addressLabel.text = @"这里是地址";
+    addressLabel.numberOfLines = 2;
+    [self.view addSubview:addressLabel];
+    
+    
+    [addressLabel mas_makeConstraints:^(MASConstraintMaker *make) {
+        make.left.mas_equalTo(showImageView.mas_right).offset(10);
+        make.top.mas_equalTo(showImageView.mas_top).offset(0);
+        make.right.mas_equalTo(self.view.mas_right).offset(-10);
+    }];
+    
+    UILabel *timeLabel = [[UILabel alloc]init ];
+    timeLabel.textColor = [UIColor blackColor];
+    timeLabel.text = @"2017-11-08";
+    timeLabel.numberOfLines = 1;
+    [self.view addSubview:timeLabel];
+    
+    
+    [timeLabel mas_makeConstraints:^(MASConstraintMaker *make) {
+        make.left.mas_equalTo(showImageView.mas_right).offset(10);
+//        make.top.mas_equalTo(addressLabel.mas_bottom).offset(0);
+        make.top.equalTo(addressLabel.mas_bottom).offset(8);
+        
+        
+        make.right.mas_equalTo(self.view.mas_right).offset(-10);
+        make.height.mas_equalTo(20);
+
+    }];
+    
+    
+    
+    
 }
 
 - (void)didReceiveMemoryWarning {

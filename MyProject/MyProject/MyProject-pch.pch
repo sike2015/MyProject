@@ -19,6 +19,7 @@
 #import <UIKit/UIKit.h>
 #import "CategoryConfig.h"
 #import "Utils.h"
+#import "Masonry.h"
 
 
 #endif /* MyProject_pch_pch */
