@@ -28,6 +28,8 @@
 		4E76F823758DDF053D5CB505 /* libPods-MyProject.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 8E088CDF3DEE8172DB44AD74 /* libPods-MyProject.a */; };
 		9C0529691FA2D94C0030E0E2 /* test1ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 9C0529681FA2D94C0030E0E2 /* test1ViewController.m */; };
 		9C467EF31FA7085400717FDC /* test2ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 9C467EF21FA7085400717FDC /* test2ViewController.m */; };
+		9C88DF7E1FB58FE80023E332 /* ADPlist.plist in Resources */ = {isa = PBXBuildFile; fileRef = 9C88DF7D1FB58FE80023E332 /* ADPlist.plist */; };
+		9C88DF811FB595FE0023E332 /* ZTMessageADMoudle.m in Sources */ = {isa = PBXBuildFile; fileRef = 9C88DF801FB595FE0023E332 /* ZTMessageADMoudle.m */; };
 		9C9BBB6F1FA1EF49003EBD3A /* CustomVerticalLabel+Extension.m in Sources */ = {isa = PBXBuildFile; fileRef = 9C9BBB5A1FA1EF49003EBD3A /* CustomVerticalLabel+Extension.m */; };
 		9C9BBB701FA1EF49003EBD3A /* NSArray+Safe.m in Sources */ = {isa = PBXBuildFile; fileRef = 9C9BBB5C1FA1EF49003EBD3A /* NSArray+Safe.m */; };
 		9C9BBB711FA1EF49003EBD3A /* NSDictionary+Safe.m in Sources */ = {isa = PBXBuildFile; fileRef = 9C9BBB5E1FA1EF49003EBD3A /* NSDictionary+Safe.m */; };
@@ -91,6 +93,9 @@
 		9C420A941FA9AB7000DBA3DC /* ModelConfig.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ModelConfig.h; sourceTree = "<group>"; };
 		9C467EF11FA7085400717FDC /* test2ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = test2ViewController.h; sourceTree = "<group>"; };
 		9C467EF21FA7085400717FDC /* test2ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = test2ViewController.m; sourceTree = "<group>"; };
+		9C88DF7D1FB58FE80023E332 /* ADPlist.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = ADPlist.plist; sourceTree = "<group>"; };
+		9C88DF7F1FB595FE0023E332 /* ZTMessageADMoudle.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ZTMessageADMoudle.h; sourceTree = "<group>"; };
+		9C88DF801FB595FE0023E332 /* ZTMessageADMoudle.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ZTMessageADMoudle.m; sourceTree = "<group>"; };
 		9C9BBB581FA1EF49003EBD3A /* CategoryConfig.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CategoryConfig.h; sourceTree = "<group>"; };
 		9C9BBB591FA1EF49003EBD3A /* CustomVerticalLabel+Extension.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "CustomVerticalLabel+Extension.h"; sourceTree = "<group>"; };
 		9C9BBB5A1FA1EF49003EBD3A /* CustomVerticalLabel+Extension.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "CustomVerticalLabel+Extension.m"; sourceTree = "<group>"; };
@@ -166,12 +171,15 @@
 				9C0529681FA2D94C0030E0E2 /* test1ViewController.m */,
 				9C467EF11FA7085400717FDC /* test2ViewController.h */,
 				9C467EF21FA7085400717FDC /* test2ViewController.m */,
+				9C88DF7F1FB595FE0023E332 /* ZTMessageADMoudle.h */,
+				9C88DF801FB595FE0023E332 /* ZTMessageADMoudle.m */,
 				39E55ADD1E261069009AB78E /* AFHttpRequest+Test.h */,
 				39E55ADE1E261069009AB78E /* AFHttpRequest+Test.m */,
 				390699B21DC08DC9005FE694 /* Main.storyboard */,
 				390699B51DC08DC9005FE694 /* Assets.xcassets */,
 				390699B71DC08DC9005FE694 /* LaunchScreen.storyboard */,
 				390699BA1DC08DC9005FE694 /* Info.plist */,
+				9C88DF7D1FB58FE80023E332 /* ADPlist.plist */,
 				390699A91DC08DC9005FE694 /* Supporting Files */,
 			);
 			path = MyProject;
@@ -416,6 +424,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				9C88DF7E1FB58FE80023E332 /* ADPlist.plist in Resources */,
 				390699B91DC08DC9005FE694 /* LaunchScreen.storyboard in Resources */,
 				390699B61DC08DC9005FE694 /* Assets.xcassets in Resources */,
 				390699B41DC08DC9005FE694 /* Main.storyboard in Resources */,
@@ -499,6 +508,7 @@
 				9CFBE68B1F59388400701BAF /* NullSafe.m in Sources */,
 				9C9BBB791FA1EF49003EBD3A /* UIView+Expansion.m in Sources */,
 				39B3300D1DC0C138000F7389 /* AFHttpRequest.m in Sources */,
+				9C88DF811FB595FE0023E332 /* ZTMessageADMoudle.m in Sources */,
 				393E8AC81EE6A3A900DD7E8F /* LoadingHUD.m in Sources */,
 				9C9BBB751FA1EF49003EBD3A /* UIColor+Random.m in Sources */,
 				9C9BBB741FA1EF49003EBD3A /* UIColor+colorWithHexString.m in Sources */,

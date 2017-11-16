@@ -146,7 +146,7 @@
     
     //自定义navigationBar 颜色
     self.navigationBar = [[CustNavigationBar alloc]initWithFrame:CGRectMake(CGRectZero.origin.x, CGRectZero.origin.y, self.view.bounds.size.width, kNavigationBarHeight) ];
-    self.navigationBar.backgroundColor = [UIColor clearColor];
+    self.navigationBar.backgroundColor = [UIColor greenColor];
     self.navigationBar.shadowNeeded = NO;  //关闭阴影
     self.navigationBar.userInteractionEnabled = YES; //开启点击事件
     [self.view addSubview:self.navigationBar];

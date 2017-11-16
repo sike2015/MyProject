@@ -7,6 +7,7 @@
 //
 
 #import "test2ViewController.h"
+#import "ZTMessageADMoudle.h"
 
 @interface test2ViewController ()
 
@@ -39,7 +40,7 @@
     
     UILabel *addressLabel = [[UILabel alloc]init ];
     addressLabel.textColor = [UIColor blackColor];
-    addressLabel.text = @"这里是地址";
+//    addressLabel.text = @"这里是地址";
     addressLabel.numberOfLines = 2;
     [self.view addSubview:addressLabel];
     
@@ -59,8 +60,9 @@
     
     [timeLabel mas_makeConstraints:^(MASConstraintMaker *make) {
         make.left.mas_equalTo(showImageView.mas_right).offset(10);
-//        make.top.mas_equalTo(addressLabel.mas_bottom).offset(0);
-        make.top.equalTo(addressLabel.mas_bottom).offset(8);
+
+        
+       make.top.greaterThanOrEqualTo(addressLabel.mas_bottom).offset(8);
         
         
         make.right.mas_equalTo(self.view.mas_right).offset(-10);
@@ -68,6 +70,13 @@
 
     }];
     
+    
+    NSString *getPath = [[NSBundle mainBundle]pathForResource:@"ADPlist" ofType:@"plist"];
+    
+    NSDictionary *getData = [NSDictionary dictionaryWithContentsOfFile:getPath];
+    
+    DTLog(@"getData:%@",getData);
+
     
     
     
