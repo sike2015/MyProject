@@ -110,6 +110,7 @@
                 }
                 else{
                     NSLog(@"解析错误!");
+                    onError(error);
                 }
                 
                 

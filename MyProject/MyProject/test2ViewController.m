@@ -8,12 +8,16 @@
 
 #import "test2ViewController.h"
 #import "ZTMessageADMoudle.h"
+#import <MJRefresh.h>
 
 @interface test2ViewController ()
 
 @end
 
 @implementation test2ViewController
+
+#define kEncryptKey @"Szy2012()*&<+MNCXZPKL-=" //加密key
+
 
 - (void)viewDidLoad {
     [super viewDidLoad];
@@ -71,13 +75,86 @@
     }];
     
     
-    NSString *getPath = [[NSBundle mainBundle]pathForResource:@"ADPlist" ofType:@"plist"];
+    NSString *testStr = @"AAAAAAAA";
     
-    NSDictionary *getData = [NSDictionary dictionaryWithContentsOfFile:getPath];
+    NSMutableDictionary *dict = [NSMutableDictionary dictionary];
+    [dict setObject:testStr forKey:@"AAA"];
     
-    DTLog(@"getData:%@",getData);
+    
+    
+//    NSString *dictJson = [dict mj_JSONString];
+    
+
+    NSString *encodeStr = [self encodeData:[testStr mj_JSONData] withKey:kEncryptKey];
+    
+    NSLog(@"加密前顺序:%@",encodeStr);
+    
+    
+    //加密base64
+    
+    NSData *encodeData = [encodeStr dataUsingEncoding:NSUTF8StringEncoding];
+    NSString *base64String = [encodeData base64EncodedStringWithOptions:0];
+
+    NSLog(@"加密 base64String:%@",base64String);
+    
+    
+    
 
     
+    
+
+    
+    
+    
+    //解密
+    NSData *decodedData = [[NSData alloc] initWithBase64EncodedString:base64String options:0];
+    NSString *decodedString = [[NSString alloc] initWithData:decodedData encoding:NSUTF8StringEncoding];
+    
+    NSLog(@"解密 base64String:%@",decodedString);
+    
+    
+    
+    NSString *decodedStr = [self encodeData:[decodedString mj_JSONData] withKey:kEncryptKey];
+
+     NSLog(@"解密后顺序:%@",decodedStr);
+    
+
+    
+//
+
+//
+//    NSLog(@"解密 base64String:%@",decodedString);
+    
+    
+//    NSString *encodeString = [self encodeString:decodedString :kEncryptKey];
+//
+//    NSLog(@"kEncryptKey:%@",encodeString);
+    
+    
+}
+
+
+
+
+
+//加密
+- (NSString *)encodeData:(NSData *)sourceData withKey:(NSString *)key {
+    NSData *keyData = [key dataUsingEncoding:NSUTF8StringEncoding];
+    Byte *keyBytes = (Byte *)[keyData bytes];   //取关键字的Byte数组, keyBytes一直指向头部
+    
+    Byte *sourceDataPoint = (Byte *)[sourceData bytes];  //取需要加密的数据的Byte数组
+    
+    for (long i = 0; i < [sourceData length]; i++) {
+        sourceDataPoint[i] = sourceDataPoint[i] ^ keyBytes[(i % [keyData length])]; //然后按位进行异或运算
+    }
+    NSString *encryptStr =  [[NSString alloc] initWithData:sourceData encoding:NSUTF8StringEncoding];
+    
+//    //进行base64加密
+//    NSData *encodeData = [encryptStr dataUsingEncoding:NSUTF8StringEncoding];
+//    NSString *base64String = [encodeData base64EncodedStringWithOptions:0];
+//
+//    return base64String;
+    return encryptStr;
     
     
 }

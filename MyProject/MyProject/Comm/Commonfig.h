@@ -51,6 +51,13 @@
 
 #define delegateWindow               [[UIApplication sharedApplication].delegate window]
 
+//一般的提示信息
+#define mAlertView(title, msg) \
+UIAlertView *alert = [[UIAlertView alloc] initWithTitle:title message:msg delegate:nil \
+cancelButtonTitle:@"OK" \
+otherButtonTitles:nil]; \
+[alert show];
+
 
 
 

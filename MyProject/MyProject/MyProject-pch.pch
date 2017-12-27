@@ -20,6 +20,7 @@
 #import "CategoryConfig.h"
 #import "Utils.h"
 #import "Masonry.h"
+#import <MJExtension.h>
 
 
 #endif /* MyProject_pch_pch */

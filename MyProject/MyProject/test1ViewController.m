@@ -29,8 +29,12 @@
     }
     
     self.tableView = [self createPlainTableView];
+
     
     [self.view addSubview:self.tableView];
+    
+    
+    mAlertView(@"", @"测试")
     
 }
 

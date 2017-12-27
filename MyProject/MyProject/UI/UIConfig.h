@@ -19,7 +19,7 @@
 #define kOrangeColor            UIColorFromRGB(0xf37346)//橙色(提示、警示性文字)
 #define kBlueTextColor          UIColorFromRGB(0x00baff)//蓝色文字
 
-
+#define kBlueTextColor1          [UIColor colorWithHexString:@"xxx"]//蓝色文字
 
 //按钮颜色
 #define kCommonBtnBGColor           UIColorFromRGB(0x00baff)//蓝色(默认颜色)
