@@ -47,6 +47,9 @@
 //获取UUID
 + (NSString*) uuid;
 
+//对字符串进行异或加密
++ (NSString *)encodeData:(NSData *)sourceData withKey:(NSString *)key;
+
 
 
 

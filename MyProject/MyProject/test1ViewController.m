@@ -8,6 +8,9 @@
 
 #import "test1ViewController.h"
 #import "test2ViewController.h"
+#import "UITableView+XY.h"
+#import <objc/runtime.h>
+#import "MJRefresh.h"
 
 @interface test1ViewController ()
 @property (nonatomic,strong) UITableView *tableView;
@@ -33,9 +36,29 @@
     
     [self.view addSubview:self.tableView];
     
+    __weak typeof(self) weakSelf = self;
+    self.tableView.mj_header  = [MJRefreshNormalHeader headerWithRefreshingBlock:^{
+        [weakSelf loadData];
+    }];
+    
+
+    [self.tableView reloadData];
+    
+    [self.view layoutIfNeeded];
     
     mAlertView(@"", @"测试")
     
+}
+
+
+
+- (void)loadData {
+    dispatch_after(dispatch_time(DISPATCH_TIME_NOW, (int64_t)(0.7 * NSEC_PER_SEC)), dispatch_get_main_queue(), ^{
+        [self.tableView.mj_header endRefreshing];
+        [self.tableView reloadData];
+    });
+    
+   
 }
 
 - (NSInteger)tableView:(UITableView*)tableView numberOfRowsInSection:(NSInteger)section
@@ -69,5 +92,19 @@
     [self.navigationController pushViewController:test2VC animated:YES];
 }
 
+#pragma mark - TableView 占位图
+
+- (UIImage *)xy_noDataViewImage {
+    return [UIImage imageNamed:@"note_list_no_data"];
+}
+
+
+- (NSString *)xy_noDataViewMessage {
+    return @"没有数据";
+}
+
+- (UIColor *)xy_noDataViewMessageColor {
+    return [UIColor redColor];
+}
 
 @end

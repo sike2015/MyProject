@@ -16,7 +16,7 @@
 
 @implementation test2ViewController
 
-#define kEncryptKey @"Szy2012()*&<+MNCXZPKL-=" //加密key
+#define kEncryptKey @"Sxy2018()*&<+MNCXZPKL-=" //加密key
 
 
 - (void)viewDidLoad {

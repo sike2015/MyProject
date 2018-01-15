@@ -28,6 +28,9 @@
 		4E76F823758DDF053D5CB505 /* libPods-MyProject.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 8E088CDF3DEE8172DB44AD74 /* libPods-MyProject.a */; };
 		9C0529691FA2D94C0030E0E2 /* test1ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 9C0529681FA2D94C0030E0E2 /* test1ViewController.m */; };
 		9C467EF31FA7085400717FDC /* test2ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 9C467EF21FA7085400717FDC /* test2ViewController.m */; };
+		9C71D2F920076554006B26EE /* UICollectionView+XY.m in Sources */ = {isa = PBXBuildFile; fileRef = 9C71D2F420076554006B26EE /* UICollectionView+XY.m */; };
+		9C71D2FA20076554006B26EE /* UITableView+XY.m in Sources */ = {isa = PBXBuildFile; fileRef = 9C71D2F620076554006B26EE /* UITableView+XY.m */; };
+		9C71D2FB20076554006B26EE /* XYNoDataView.m in Sources */ = {isa = PBXBuildFile; fileRef = 9C71D2F820076554006B26EE /* XYNoDataView.m */; };
 		9C88DF7E1FB58FE80023E332 /* ADPlist.plist in Resources */ = {isa = PBXBuildFile; fileRef = 9C88DF7D1FB58FE80023E332 /* ADPlist.plist */; };
 		9C88DF811FB595FE0023E332 /* ZTMessageADMoudle.m in Sources */ = {isa = PBXBuildFile; fileRef = 9C88DF801FB595FE0023E332 /* ZTMessageADMoudle.m */; };
 		9C9BBB6F1FA1EF49003EBD3A /* CustomVerticalLabel+Extension.m in Sources */ = {isa = PBXBuildFile; fileRef = 9C9BBB5A1FA1EF49003EBD3A /* CustomVerticalLabel+Extension.m */; };
@@ -93,6 +96,12 @@
 		9C420A941FA9AB7000DBA3DC /* ModelConfig.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ModelConfig.h; sourceTree = "<group>"; };
 		9C467EF11FA7085400717FDC /* test2ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = test2ViewController.h; sourceTree = "<group>"; };
 		9C467EF21FA7085400717FDC /* test2ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = test2ViewController.m; sourceTree = "<group>"; };
+		9C71D2F320076554006B26EE /* UICollectionView+XY.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UICollectionView+XY.h"; sourceTree = "<group>"; };
+		9C71D2F420076554006B26EE /* UICollectionView+XY.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UICollectionView+XY.m"; sourceTree = "<group>"; };
+		9C71D2F520076554006B26EE /* UITableView+XY.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UITableView+XY.h"; sourceTree = "<group>"; };
+		9C71D2F620076554006B26EE /* UITableView+XY.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UITableView+XY.m"; sourceTree = "<group>"; };
+		9C71D2F720076554006B26EE /* XYNoDataView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XYNoDataView.h; sourceTree = "<group>"; };
+		9C71D2F820076554006B26EE /* XYNoDataView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XYNoDataView.m; sourceTree = "<group>"; };
 		9C88DF7D1FB58FE80023E332 /* ADPlist.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = ADPlist.plist; sourceTree = "<group>"; };
 		9C88DF7F1FB595FE0023E332 /* ZTMessageADMoudle.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ZTMessageADMoudle.h; sourceTree = "<group>"; };
 		9C88DF801FB595FE0023E332 /* ZTMessageADMoudle.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ZTMessageADMoudle.m; sourceTree = "<group>"; };
@@ -234,6 +243,7 @@
 		394701DE1DCC6112003D6AF2 /* Libary */ = {
 			isa = PBXGroup;
 			children = (
+				9C71D2F220076554006B26EE /* XYTableViewNoDataView */,
 				394701DF1DCC6226003D6AF2 /* UUIDShortener */,
 			);
 			path = Libary;
@@ -306,6 +316,19 @@
 				9C420A941FA9AB7000DBA3DC /* ModelConfig.h */,
 			);
 			path = Model;
+			sourceTree = "<group>";
+		};
+		9C71D2F220076554006B26EE /* XYTableViewNoDataView */ = {
+			isa = PBXGroup;
+			children = (
+				9C71D2F320076554006B26EE /* UICollectionView+XY.h */,
+				9C71D2F420076554006B26EE /* UICollectionView+XY.m */,
+				9C71D2F520076554006B26EE /* UITableView+XY.h */,
+				9C71D2F620076554006B26EE /* UITableView+XY.m */,
+				9C71D2F720076554006B26EE /* XYNoDataView.h */,
+				9C71D2F820076554006B26EE /* XYNoDataView.m */,
+			);
+			path = XYTableViewNoDataView;
 			sourceTree = "<group>";
 		};
 		9C9BBB571FA1EF49003EBD3A /* Category */ = {
@@ -488,6 +511,7 @@
 			files = (
 				390699B11DC08DC9005FE694 /* ViewController.m in Sources */,
 				9C467EF31FA7085400717FDC /* test2ViewController.m in Sources */,
+				9C71D2FB20076554006B26EE /* XYNoDataView.m in Sources */,
 				39B330061DC0BCC4000F7389 /* GlobalShare.m in Sources */,
 				396634941DC0A25200F22D27 /* CustomTextField.m in Sources */,
 				390699AE1DC08DC9005FE694 /* AppDelegate.m in Sources */,
@@ -498,11 +522,13 @@
 				39B32FFB1DC0B192000F7389 /* CustNavigationBar.m in Sources */,
 				39B32FF81DC0B0A1000F7389 /* BaseNormalViewController.m in Sources */,
 				394701DD1DCC60F7003D6AF2 /* Utils.m in Sources */,
+				9C71D2FA20076554006B26EE /* UITableView+XY.m in Sources */,
 				9C9BBB841FA1F033003EBD3A /* AppDelegate+GoViewController.m in Sources */,
 				39B32FF51DC0B01D000F7389 /* BaseViewController.m in Sources */,
 				9C9BBB7D1FA1EFD6003EBD3A /* RootViewController.m in Sources */,
 				9C9BBB811FA1F00B003EBD3A /* LoginViewController.m in Sources */,
 				9C9BBB701FA1EF49003EBD3A /* NSArray+Safe.m in Sources */,
+				9C71D2F920076554006B26EE /* UICollectionView+XY.m in Sources */,
 				390699AB1DC08DC9005FE694 /* main.m in Sources */,
 				9C9BBB721FA1EF49003EBD3A /* NSString+extension.m in Sources */,
 				9CFBE68B1F59388400701BAF /* NullSafe.m in Sources */,

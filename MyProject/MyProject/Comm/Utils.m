@@ -205,5 +205,19 @@
     return shortUUIDString;
 }
 
+//对字符串进行异或加密
++ (NSString *)encodeData:(NSData *)sourceData withKey:(NSString *)key{
+    NSData *keyData = [key dataUsingEncoding:NSUTF8StringEncoding];
+    Byte *keyBytes = (Byte *)[keyData bytes];   //取关键字的Byte数组, keyBytes一直指向头部
+    
+    Byte *sourceDataPoint = (Byte *)[sourceData bytes];  //取需要加密的数据的Byte数组
+    
+    for (long i = 0; i < [sourceData length]; i++) {
+        sourceDataPoint[i] = sourceDataPoint[i] ^ keyBytes[(i % [keyData length])]; //然后按位进行异或运算
+    }
+    NSString *encryptStr =  [[NSString alloc] initWithData:sourceData encoding:NSUTF8StringEncoding];
+    return encryptStr;
+}
+
 
 @end
