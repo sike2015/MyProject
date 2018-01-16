@@ -9,6 +9,7 @@
 #import "AppDelegate.h"
 #import "AppDelegate+GoViewController.h"
 #import "RootViewController.h"
+#import "XHLaunchAd.h"
 
 @interface AppDelegate ()
 
@@ -33,6 +34,18 @@
     self.window.rootViewController = rootVC;
     [self.window makeKeyAndVisible];
     
+    
+    //设置你工程的启动页使用的是:LaunchImage 还是 LaunchScreen.storyboard(不设置默认:LaunchImage)
+    [XHLaunchAd setLaunchSourceType:SourceTypeLaunchImage];
+    
+    //配置广告数据
+    XHLaunchImageAdConfiguration *imageAdconfiguration = [XHLaunchImageAdConfiguration defaultConfiguration];
+    //广告图片URLString/或本地图片名(.jpg/.gif请带上后缀)
+    imageAdconfiguration.imageNameOrURLString = @"image0.jpg";
+    //广告点击打开页面参数(openModel可为NSString,模型,字典等任意类型)
+    imageAdconfiguration.openModel = @"https://github.com/CoderZhuXH/XHLaunchAd";
+    //显示图片开屏广告
+    [XHLaunchAd imageAdWithImageAdConfiguration:imageAdconfiguration delegate:self];
     
     return YES;
 }

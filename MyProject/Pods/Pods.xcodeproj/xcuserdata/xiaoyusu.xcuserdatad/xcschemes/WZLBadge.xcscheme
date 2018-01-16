@@ -14,7 +14,7 @@
             buildForAnalyzing = "YES">
             <BuildableReference
                BuildableIdentifier = "primary"
-               BlueprintIdentifier = "18637E5FCD1E92BF9843B1F3D16E3851"
+               BlueprintIdentifier = "96CC716B3CBCF1F950D7A7BBDFB75C15"
                BuildableName = "libWZLBadge.a"
                BlueprintName = "WZLBadge"
                ReferencedContainer = "container:Pods.xcodeproj">
@@ -47,7 +47,7 @@
       <MacroExpansion>
          <BuildableReference
             BuildableIdentifier = "primary"
-            BlueprintIdentifier = "18637E5FCD1E92BF9843B1F3D16E3851"
+            BlueprintIdentifier = "96CC716B3CBCF1F950D7A7BBDFB75C15"
             BuildableName = "libWZLBadge.a"
             BlueprintName = "WZLBadge"
             ReferencedContainer = "container:Pods.xcodeproj">

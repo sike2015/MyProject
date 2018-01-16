@@ -14,7 +14,7 @@
             buildForAnalyzing = "YES">
             <BuildableReference
                BuildableIdentifier = "primary"
-               BlueprintIdentifier = "C22BDE1EE75010E737E7138EDB648162"
+               BlueprintIdentifier = "AD0D204A9764FBB9B65B416B9877EC90"
                BuildableName = "libWMPageController.a"
                BlueprintName = "WMPageController"
                ReferencedContainer = "container:Pods.xcodeproj">
@@ -47,7 +47,7 @@
       <MacroExpansion>
          <BuildableReference
             BuildableIdentifier = "primary"
-            BlueprintIdentifier = "C22BDE1EE75010E737E7138EDB648162"
+            BlueprintIdentifier = "AD0D204A9764FBB9B65B416B9877EC90"
             BuildableName = "libWMPageController.a"
             BlueprintName = "WMPageController"
             ReferencedContainer = "container:Pods.xcodeproj">

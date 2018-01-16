@@ -16,4 +16,5 @@ pod 'SVProgressHUD'
 pod 'UTDID'
 pod 'MJExtension'
 pod 'WMPageController'
+pod 'XHLaunchAd'
 end

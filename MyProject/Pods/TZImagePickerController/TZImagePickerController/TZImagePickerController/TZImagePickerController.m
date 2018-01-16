@@ -4,7 +4,7 @@
 //
 //  Created by 谭真 on 15/12/24.
 //  Copyright © 2015年 谭真. All rights reserved.
-//  version 1.9.4 - 2017.11.08
+//  version 1.9.8 - 2017.12.19
 //  更多信息，请前往项目的github地址：https://github.com/banchichen/TZImagePickerController
 
 #import "TZImagePickerController.h"
@@ -38,10 +38,19 @@
 
 @implementation TZImagePickerController
 
+- (instancetype)init {
+    self = [super init];
+    if (self) {
+        self = [self initWithMaxImagesCount:9 delegate:nil];
+    }
+    return self;
+}
+
 #pragma clang diagnostic push
 #pragma clang diagnostic ignored "-Wdeprecated-declarations"
 - (void)viewDidLoad {
     [super viewDidLoad];
+    self.needShowStatusBar = ![UIApplication sharedApplication].statusBarHidden;
     self.view.backgroundColor = [UIColor whiteColor];
     self.navigationBar.barStyle = UIBarStyleBlack;
     self.navigationBar.translucent = YES;
@@ -56,13 +65,15 @@
         self.navigationBar.barTintColor = [UIColor colorWithRed:(34/255.0) green:(34/255.0)  blue:(34/255.0) alpha:1.0];
         self.navigationBar.tintColor = [UIColor whiteColor];
         self.automaticallyAdjustsScrollViewInsets = NO;
-        if (!TZ_isGlobalHideStatusBar) [UIApplication sharedApplication].statusBarHidden = NO;
-    }    
+        if (self.needShowStatusBar) [UIApplication sharedApplication].statusBarHidden = NO;
+    }
 }
 
 - (void)setNaviBgColor:(UIColor *)naviBgColor {
     _naviBgColor = naviBgColor;
-    self.navigationBar.barTintColor = naviBgColor;
+    if (iOS7Later) {
+        self.navigationBar.barTintColor = naviBgColor;
+    }
 }
 
 - (void)setNaviTitleColor:(UIColor *)naviTitleColor {
@@ -115,7 +126,7 @@
     
     if (self.isStatusBarDefault) {
         [UIApplication sharedApplication].statusBarStyle = iOS7Later ? UIStatusBarStyleDefault : UIStatusBarStyleBlackOpaque;
-    }else{
+    } else {
         [UIApplication sharedApplication].statusBarStyle = iOS7Later ? UIStatusBarStyleLightContent : UIStatusBarStyleBlackOpaque;
     }
 }
@@ -526,7 +537,7 @@
 - (void)willInterfaceOrientionChange {
     dispatch_after(dispatch_time(DISPATCH_TIME_NOW, (int64_t)(0.02 * NSEC_PER_SEC)), dispatch_get_main_queue(), ^{
         if (![UIApplication sharedApplication].statusBarHidden) {
-            if (iOS7Later && !TZ_isGlobalHideStatusBar) [UIApplication sharedApplication].statusBarHidden = NO;
+            if (iOS7Later && self.needShowStatusBar) [UIApplication sharedApplication].statusBarHidden = NO;
         }
     });
 }
@@ -605,12 +616,11 @@
     dispatch_async(dispatch_get_global_queue(0, 0), ^{
         TZImagePickerController *imagePickerVc = (TZImagePickerController *)self.navigationController;
         [[TZImageManager manager] getAllAlbums:imagePickerVc.allowPickingVideo allowPickingImage:imagePickerVc.allowPickingImage completion:^(NSArray<TZAlbumModel *> *models) {
-            _albumArr = [NSMutableArray arrayWithArray:models];
-            for (TZAlbumModel *albumModel in _albumArr) {
-                albumModel.selectedModels = imagePickerVc.selectedModels;
-            }
-            
             dispatch_async(dispatch_get_main_queue(), ^{
+                _albumArr = [NSMutableArray arrayWithArray:models];
+                for (TZAlbumModel *albumModel in _albumArr) {
+                    albumModel.selectedModels = imagePickerVc.selectedModels;
+                }
                 if (!_tableView) {
                     _tableView = [[UITableView alloc] initWithFrame:CGRectZero style:UITableViewStylePlain];
                     _tableView.rowHeight = 70;
@@ -642,7 +652,7 @@
     BOOL isStatusBarHidden = [UIApplication sharedApplication].isStatusBarHidden;
     if (self.navigationController.navigationBar.isTranslucent) {
         top = naviBarHeight;
-        if (iOS7Later && !isStatusBarHidden) top += [TZCommonTools statusBarHeight];
+        if (iOS7Later && !isStatusBarHidden) top += [TZCommonTools tz_statusBarHeight];
         tableViewHeight = self.view.tz_height - top;
     } else {
         tableViewHeight = self.view.tz_height;
@@ -708,25 +718,40 @@
     }
 }
 
+#pragma clang diagnostic push
+#pragma clang diagnostic ignored "-Wdeprecated-declarations"
+- (CGSize)tz_calculateSizeWithAttributes:(NSDictionary *)attributes maxSize:(CGSize)maxSize {
+    CGSize size;
+    if (iOS7Later) {
+        size = [self boundingRectWithSize:maxSize options:NSStringDrawingUsesFontLeading attributes:attributes context:nil].size;
+    } else {
+        size = [self sizeWithFont:attributes[NSFontAttributeName] constrainedToSize:maxSize];
+    }
+    return size;
+}
+#pragma clang diagnostic pop
+
 @end
 
 
 @implementation TZCommonTools
 
-+ (BOOL)isIPhoneX {
++ (BOOL)tz_isIPhoneX {
     struct utsname systemInfo;
     uname(&systemInfo);
     NSString *platform = [NSString stringWithCString:systemInfo.machine encoding:NSASCIIStringEncoding];
     if ([platform isEqualToString:@"i386"] || [platform isEqualToString:@"x86_64"]) {
         // 模拟器下采用屏幕的高度来判断
-        return [UIScreen mainScreen].bounds.size.height == 812;
+        return (CGSizeEqualToSize([UIScreen mainScreen].bounds.size, CGSizeMake(375, 812)) ||
+                CGSizeEqualToSize([UIScreen mainScreen].bounds.size, CGSizeMake(812, 375)));
     }
-    BOOL isIPhoneX = [platform isEqualToString:@"iPhone10,3"];
+    // iPhone10,6是美版iPhoneX 感谢hegelsu指出：https://github.com/banchichen/TZImagePickerController/issues/635
+    BOOL isIPhoneX = [platform isEqualToString:@"iPhone10,3"] || [platform isEqualToString:@"iPhone10,6"];
     return isIPhoneX;
 }
 
-+ (CGFloat)statusBarHeight {
-    return [self isIPhoneX] ? 44 : 20;
++ (CGFloat)tz_statusBarHeight {
+    return [self tz_isIPhoneX] ? 44 : 20;
 }
 
 @end
