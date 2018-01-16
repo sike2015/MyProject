@@ -35,6 +35,9 @@
     [self.window makeKeyAndVisible];
     
     
+    //停留2s再进主界面
+       [NSThread sleepForTimeInterval:2.0];
+    
     //设置你工程的启动页使用的是:LaunchImage 还是 LaunchScreen.storyboard(不设置默认:LaunchImage)
     [XHLaunchAd setLaunchSourceType:SourceTypeLaunchImage];
     
