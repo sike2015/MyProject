@@ -66,9 +66,9 @@ otherButtonTitles:nil]; \
 
 
 #if DEBUG
-#define DTLog(xx, ...)                  NSLog(@"%s(%d): " xx, __PRETTY_FUNCTION__, __LINE__, ##__VA_ARGS__)
+#define DLog(xx, ...)                  NSLog(@"%s(%d): " xx, __PRETTY_FUNCTION__, __LINE__, ##__VA_ARGS__)
 #else
-#define DTLog(xx, ...)                  nil
+#define DLog(xx, ...)                  nil
 #endif
 
 

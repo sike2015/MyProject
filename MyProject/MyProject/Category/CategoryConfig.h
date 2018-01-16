@@ -12,6 +12,7 @@
 
 #import "CustomVerticalLabel+Extension.h"
 #import "UIButton+Extension.h"
+#import "UIButton+EnlargeEdge.h"
 #import "UIView+Expansion.h"
 
 #import "NSArray+Safe.h"

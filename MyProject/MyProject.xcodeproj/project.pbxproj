@@ -27,6 +27,7 @@
 		39E55ADF1E261069009AB78E /* AFHttpRequest+Test.m in Sources */ = {isa = PBXBuildFile; fileRef = 39E55ADE1E261069009AB78E /* AFHttpRequest+Test.m */; };
 		4E76F823758DDF053D5CB505 /* libPods-MyProject.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 8E088CDF3DEE8172DB44AD74 /* libPods-MyProject.a */; };
 		9C0529691FA2D94C0030E0E2 /* test1ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 9C0529681FA2D94C0030E0E2 /* test1ViewController.m */; };
+		9C133009200DC627004A4DB1 /* UIButton+EnlargeEdge.m in Sources */ = {isa = PBXBuildFile; fileRef = 9C133008200DC627004A4DB1 /* UIButton+EnlargeEdge.m */; };
 		9C467EF31FA7085400717FDC /* test2ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 9C467EF21FA7085400717FDC /* test2ViewController.m */; };
 		9C71D2F920076554006B26EE /* UICollectionView+XY.m in Sources */ = {isa = PBXBuildFile; fileRef = 9C71D2F420076554006B26EE /* UICollectionView+XY.m */; };
 		9C71D2FA20076554006B26EE /* UITableView+XY.m in Sources */ = {isa = PBXBuildFile; fileRef = 9C71D2F620076554006B26EE /* UITableView+XY.m */; };
@@ -93,6 +94,8 @@
 		9412BD434C4219A816B9D097 /* Pods-MyProject.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MyProject.debug.xcconfig"; path = "Pods/Target Support Files/Pods-MyProject/Pods-MyProject.debug.xcconfig"; sourceTree = "<group>"; };
 		9C0529671FA2D94C0030E0E2 /* test1ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = test1ViewController.h; sourceTree = "<group>"; };
 		9C0529681FA2D94C0030E0E2 /* test1ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = test1ViewController.m; sourceTree = "<group>"; };
+		9C133007200DC627004A4DB1 /* UIButton+EnlargeEdge.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "UIButton+EnlargeEdge.h"; sourceTree = "<group>"; };
+		9C133008200DC627004A4DB1 /* UIButton+EnlargeEdge.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "UIButton+EnlargeEdge.m"; sourceTree = "<group>"; };
 		9C420A941FA9AB7000DBA3DC /* ModelConfig.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ModelConfig.h; sourceTree = "<group>"; };
 		9C467EF11FA7085400717FDC /* test2ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = test2ViewController.h; sourceTree = "<group>"; };
 		9C467EF21FA7085400717FDC /* test2ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = test2ViewController.m; sourceTree = "<group>"; };
@@ -347,6 +350,8 @@
 				9C9BBB601FA1EF49003EBD3A /* NSString+extension.m */,
 				9C9BBB611FA1EF49003EBD3A /* UIButton+Extension.h */,
 				9C9BBB621FA1EF49003EBD3A /* UIButton+Extension.m */,
+				9C133007200DC627004A4DB1 /* UIButton+EnlargeEdge.h */,
+				9C133008200DC627004A4DB1 /* UIButton+EnlargeEdge.m */,
 				9C9BBB631FA1EF49003EBD3A /* UIColor+colorWithHexString.h */,
 				9C9BBB641FA1EF49003EBD3A /* UIColor+colorWithHexString.m */,
 				9C9BBB651FA1EF49003EBD3A /* UIColor+Random.h */,
@@ -516,6 +521,7 @@
 				396634941DC0A25200F22D27 /* CustomTextField.m in Sources */,
 				390699AE1DC08DC9005FE694 /* AppDelegate.m in Sources */,
 				394701E21DCC6226003D6AF2 /* UUIDShortener.m in Sources */,
+				9C133009200DC627004A4DB1 /* UIButton+EnlargeEdge.m in Sources */,
 				39E55ADF1E261069009AB78E /* AFHttpRequest+Test.m in Sources */,
 				9C9BBB761FA1EF49003EBD3A /* UIImage+ZTHColor.m in Sources */,
 				396634951DC0A25200F22D27 /* CustomVerticalLabel.m in Sources */,

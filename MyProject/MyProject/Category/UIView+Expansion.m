@@ -259,7 +259,7 @@
     if (_reloadButtonBlock) {
         _reloadButtonBlock(self);
         
-        DTLog(@"self:%@",self);
+        DLog(@"self:%@",self);
     }
     
 }

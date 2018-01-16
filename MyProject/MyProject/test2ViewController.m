@@ -131,9 +131,20 @@
 //    NSLog(@"kEncryptKey:%@",encodeString);
     
     
+    
+    UIButton *testBtn = [[UIButton alloc]initWithFrame:CGRectMake(0, 0, 100, 100) ];
+    testBtn.backgroundColor = [UIColor blackColor];
+    testBtn.center = self.view.center;
+    [testBtn addTarget:self action:@selector(testFun) forControlEvents:UIControlEventTouchUpInside];
+    testBtn.enlargedEdge = 30;
+    [self.view addSubview:testBtn];
+    
+    
 }
 
-
+- (void)testFun{
+    DLog(@"这里是测试button扩大区域");
+}
 
 
 
