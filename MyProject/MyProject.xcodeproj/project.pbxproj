@@ -39,6 +39,8 @@
 		9C0ADE75200E09C600352592 /* video0.mp4 in Resources */ = {isa = PBXBuildFile; fileRef = 9C0ADE6A200E09C600352592 /* video0.mp4 */; };
 		9C0ADE76200E09C600352592 /* video1.mp4 in Resources */ = {isa = PBXBuildFile; fileRef = 9C0ADE6B200E09C600352592 /* video1.mp4 */; };
 		9C133009200DC627004A4DB1 /* UIButton+EnlargeEdge.m in Sources */ = {isa = PBXBuildFile; fileRef = 9C133008200DC627004A4DB1 /* UIButton+EnlargeEdge.m */; };
+		9C3DEE3D200F1AF90010957E /* WebViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 9C3DEE3B200F1AF90010957E /* WebViewController.m */; };
+		9C3DEE40200F2C110010957E /* UIViewController+Expansion.m in Sources */ = {isa = PBXBuildFile; fileRef = 9C3DEE3F200F2C110010957E /* UIViewController+Expansion.m */; };
 		9C467EF31FA7085400717FDC /* test2ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 9C467EF21FA7085400717FDC /* test2ViewController.m */; };
 		9C71D2F920076554006B26EE /* UICollectionView+XY.m in Sources */ = {isa = PBXBuildFile; fileRef = 9C71D2F420076554006B26EE /* UICollectionView+XY.m */; };
 		9C71D2FA20076554006B26EE /* UITableView+XY.m in Sources */ = {isa = PBXBuildFile; fileRef = 9C71D2F620076554006B26EE /* UITableView+XY.m */; };
@@ -118,6 +120,10 @@
 		9C0ADE6B200E09C600352592 /* video1.mp4 */ = {isa = PBXFileReference; lastKnownFileType = file; path = video1.mp4; sourceTree = "<group>"; };
 		9C133007200DC627004A4DB1 /* UIButton+EnlargeEdge.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "UIButton+EnlargeEdge.h"; sourceTree = "<group>"; };
 		9C133008200DC627004A4DB1 /* UIButton+EnlargeEdge.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "UIButton+EnlargeEdge.m"; sourceTree = "<group>"; };
+		9C3DEE3B200F1AF90010957E /* WebViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WebViewController.m; sourceTree = "<group>"; };
+		9C3DEE3C200F1AF90010957E /* WebViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WebViewController.h; sourceTree = "<group>"; };
+		9C3DEE3E200F2C110010957E /* UIViewController+Expansion.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "UIViewController+Expansion.h"; sourceTree = "<group>"; };
+		9C3DEE3F200F2C110010957E /* UIViewController+Expansion.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "UIViewController+Expansion.m"; sourceTree = "<group>"; };
 		9C420A941FA9AB7000DBA3DC /* ModelConfig.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ModelConfig.h; sourceTree = "<group>"; };
 		9C467EF11FA7085400717FDC /* test2ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = test2ViewController.h; sourceTree = "<group>"; };
 		9C467EF21FA7085400717FDC /* test2ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = test2ViewController.m; sourceTree = "<group>"; };
@@ -206,6 +212,8 @@
 				9C0529681FA2D94C0030E0E2 /* test1ViewController.m */,
 				9C467EF11FA7085400717FDC /* test2ViewController.h */,
 				9C467EF21FA7085400717FDC /* test2ViewController.m */,
+				9C3DEE3C200F1AF90010957E /* WebViewController.h */,
+				9C3DEE3B200F1AF90010957E /* WebViewController.m */,
 				9C88DF7F1FB595FE0023E332 /* ZTMessageADMoudle.h */,
 				9C88DF801FB595FE0023E332 /* ZTMessageADMoudle.m */,
 				39E55ADD1E261069009AB78E /* AFHttpRequest+Test.h */,
@@ -401,6 +409,8 @@
 				9C9BBB681FA1EF49003EBD3A /* UIImage+ZTHColor.m */,
 				9C9BBB6D1FA1EF49003EBD3A /* UIView+Expansion.h */,
 				9C9BBB6E1FA1EF49003EBD3A /* UIView+Expansion.m */,
+				9C3DEE3E200F2C110010957E /* UIViewController+Expansion.h */,
+				9C3DEE3F200F2C110010957E /* UIViewController+Expansion.m */,
 			);
 			path = Category;
 			sourceTree = "<group>";
@@ -572,6 +582,7 @@
 				39B330061DC0BCC4000F7389 /* GlobalShare.m in Sources */,
 				396634941DC0A25200F22D27 /* CustomTextField.m in Sources */,
 				390699AE1DC08DC9005FE694 /* AppDelegate.m in Sources */,
+				9C3DEE40200F2C110010957E /* UIViewController+Expansion.m in Sources */,
 				394701E21DCC6226003D6AF2 /* UUIDShortener.m in Sources */,
 				9C133009200DC627004A4DB1 /* UIButton+EnlargeEdge.m in Sources */,
 				39E55ADF1E261069009AB78E /* AFHttpRequest+Test.m in Sources */,
@@ -597,6 +608,7 @@
 				9C9BBB751FA1EF49003EBD3A /* UIColor+Random.m in Sources */,
 				9C9BBB741FA1EF49003EBD3A /* UIColor+colorWithHexString.m in Sources */,
 				9C9BBB731FA1EF49003EBD3A /* UIButton+Extension.m in Sources */,
+				9C3DEE3D200F1AF90010957E /* WebViewController.m in Sources */,
 				9C0529691FA2D94C0030E0E2 /* test1ViewController.m in Sources */,
 				9C9BBB711FA1EF49003EBD3A /* NSDictionary+Safe.m in Sources */,
 				39B3300A1DC0C118000F7389 /* AFRequest.m in Sources */,
