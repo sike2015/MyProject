@@ -33,8 +33,9 @@
     
     self.tableView = [self createPlainTableView];
 
-    
     [self.view addSubview:self.tableView];
+
+    DLog(@"tableView frame:%@",NSStringFromCGRect(self.tableView.frame));
     
     __weak typeof(self) weakSelf = self;
     self.tableView.mj_header  = [MJRefreshNormalHeader headerWithRefreshingBlock:^{

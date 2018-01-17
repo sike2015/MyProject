@@ -62,7 +62,7 @@
 #define kBaseOriginY 0
 #define kBaseWidth [UIScreen mainScreen].bounds.size.width
 #define kBaseHeight [UIScreen mainScreen].bounds.size.height
-#define kNavigationBarHeight 64
+#define kNavigationBarHeight (kBaseHeight == 812.0 ? 88 : 64)
 #define kTabBarHeight 49     //tabBar高度
 
 
