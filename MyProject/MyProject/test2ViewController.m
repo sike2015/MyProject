@@ -9,6 +9,7 @@
 #import "test2ViewController.h"
 #import "ZTMessageADMoudle.h"
 #import <MJRefresh.h>
+#import "test1ViewController.h"
 
 @interface test2ViewController ()
 
@@ -17,6 +18,11 @@
 @implementation test2ViewController
 
 #define kEncryptKey @"Sxy2018()*&<+MNCXZPKL-=" //加密key
+
+
+//导航栏左侧按纽点击事件
+- (void)navbarLeftClick{
+}
 
 
 - (void)viewDidLoad {
@@ -144,6 +150,8 @@
 
 - (void)testFun{
     DLog(@"这里是测试button扩大区域");
+    test1ViewController *test1VC = [[test1ViewController alloc]init ];
+    [self.navigationController pushViewController:test1VC animated:YES];
 }
 
 

@@ -178,7 +178,7 @@
     }
     
     //返回按钮
-    self.leftButton = [UIButton createButton:CGRectMake(kControlOriginX, kControlOriginY, kControlWidth, kControlHeight) normalImage:@"back_new"  action:@selector(goBack) addTarget:self];
+    self.leftButton = [UIButton createButton:CGRectMake(kControlOriginX, kControlOriginY, kControlWidth, kControlHeight) normalImage:@"btn_back"  action:@selector(goBack) addTarget:self];
     self.leftButton.center = CGPointMake(self.leftButton.center.x, self.navigationBar.center.y);
     [self.navigationBar addSubview:self.leftButton];
     

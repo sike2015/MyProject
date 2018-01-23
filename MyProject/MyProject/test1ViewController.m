@@ -19,6 +19,8 @@
 
 @implementation test1ViewController
 
+
+
 - (void)viewDidLoad {
     [super viewDidLoad];
     
@@ -48,6 +50,8 @@
     [self.view layoutIfNeeded];
     
     mAlertView(@"", @"测试")
+    
+
     
 }
 

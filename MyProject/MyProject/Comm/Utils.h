@@ -29,13 +29,12 @@
 + (BOOL)validatePhone:(NSString *)phoneNumber;   //验证手机号码
 + (BOOL)validatePassword:(NSString *)password;   //验证密码是否 包含数字和英文字母
 
-+ (NSString *)getCurrentDate;
++ (NSString *)getCurrentDate;                   //获取当前时间
 
 
 
 //yes 到正序 no为倒叙
 + (NSArray *)sortArray:(NSArray *)dataArray withKey:(NSString *)key ascending:(BOOL)ascending;
-
 
 
 +(void)clearDiskData;  //清空硬盘所有存储数据

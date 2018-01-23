@@ -33,7 +33,8 @@
 //当前版本
 #define kCurrentVersion [[UIDevice currentDevice].systemVersion doubleValue]
 
-
+// 判断iPhone X
+#define IS_IPHONE_X        CGSizeEqualToSize([[UIScreen mainScreen] preferredMode].size, CGSizeMake(1125, 2436))
 
 
 //安全检查使用对象  add by zuoweijie
@@ -42,8 +43,8 @@
 #define IsNOTNullOrEmptyOfNSString(_STRING___) (_STRING___ && [_STRING___ isKindOfClass:[NSString class]] && [_STRING___ length])
 #define IsNOTNullOrEmptyOfNSNumber(_NUMBER___) (_NUMBER___ && [_NUMBER___ isKindOfClass:[NSNumber class]] )
 #define IsNullObj(____object____) ((____object____ && [____object____ isKindOfClass: [NSNull class]]) || (____object____ == nil))
-#define SafeToInitSomeString(_STRING__)  (( IsNOTNullOrEmptyOfNSString(_STRING__))?(_STRING__):@"")
-#define SafeToInitSomeNSNumber(_NSNUMBER__)  (( IsNOTNullOrEmptyOfNSNumber(_NSNUMBER__))?(_NSNUMBER__):0)
+#define SafeUseString(_STRING__)  (( IsNOTNullOrEmptyOfNSString(_STRING__))?(_STRING__):@"")
+#define SafeUseNSNumber(_NSNUMBER__)  (( IsNOTNullOrEmptyOfNSNumber(_NSNUMBER__))?(_NSNUMBER__):0)
 
 //判断是否空字符串
 #define isNullString(s)         (!s || [s isEqual:[NSNull null]] || [s isEqualToString:@""])
